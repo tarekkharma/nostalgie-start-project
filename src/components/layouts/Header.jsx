@@ -1,9 +1,11 @@
 import Logo from "../../assets/img/logo.png";
 import MenuIcon from "@mui/icons-material/Menu";
-import { Link, useLocation } from "react-router-dom";
+import CloseIcon from "@mui/icons-material/Close";
+import SearchIcon from "@mui/icons-material/Search";
+import { useNavigate, NavLink, useLocation } from "react-router-dom";
 import "../../assets/partiels/header.scss";
 import { useState, useEffect } from "react";
-import CloseIcon from "@mui/icons-material/Close";
+import Link from "../Link";
 
 function Header() {
   const [headerStatus, setHeaderStatus] = useState("closed");
@@ -13,10 +15,6 @@ function Header() {
   useEffect(() => {
     setHeaderStatus("closed");
   }, [location]);
-
-  function myFucntion() {
-    alert("clicked");
-  }
 
   return (
     <header className="App-header">
@@ -44,17 +42,12 @@ function Header() {
               }}
             />
           </div>
-          <Link to="/">Home</Link>
-          <Link to="/items">Products</Link>
+          <Link url="/" style="text" text="Home" />
+          <Link url="/items" style="text" text="Products" />
         </div>
       </div>
       <form className="search-form">
-        <button className="submit-button" type="submit">
-          <img
-            src={require("../../assets/img/search-icon.png")}
-            alt="search-icon"
-          />
-        </button>
+        <SearchIcon />
         <input
           className="search-box"
           type="text"

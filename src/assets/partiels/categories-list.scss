@@ -1,0 +1,27 @@
+.categoriesList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-content: center;
+  justify-content: center;
+  margin: 0px 15px;
+
+  @media (min-width: 460px) {
+    gap: 30px;
+    margin: 0px 50px;
+  }
+}
+
+.section-title {
+  height: 50px;
+  margin: 10px 15px 30px 15px;
+  position: relative;
+
+  h2 {
+    position: absolute;
+    font-size: 1.1rem;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

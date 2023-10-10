@@ -1,0 +1,38 @@
+.imageBox {
+  width: fit-content;
+  height: fit-content;
+  position: relative;
+  img {
+    height: 150px;
+    width: 150px;
+
+    @media (min-width: 460px) {
+      height: 230px;
+      width: 230px;
+    }
+  }
+
+  .imageBoxOverlay {
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgba(black, 0.4);
+
+    @media (min-width: 460px) {
+      height: 230px;
+      width: 230px;
+    }
+  }
+
+  h2 {
+    color: white;
+    font-size: 1.2rem;
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+  }
+}

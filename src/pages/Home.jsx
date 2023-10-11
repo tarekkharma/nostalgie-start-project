@@ -1,11 +1,11 @@
-import Link from "../components/Link";
-import Logo from "../assets/img/logo.jpeg";
 import "../assets/partiels/categories-list.scss";
 import CategoriesList from "../components/CategoriesList";
+import Slider from '../components/Slider';
 
 function Home() {
   return (
     <div>
+      <Slider />
       <div className="section-title">
         <h2>Antique Categories</h2>
       </div>

@@ -1,10 +1,20 @@
 import Header from "./components/layouts/Header";
-import { Outlet } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
+import SavedItems from "./pages/SavedItems";
+import Home from "./pages/Home";
+import Items from "./pages/Items";
+import Item from "./pages/Item";
+
 function App() {
   return (
     <div className="App">
       <Header />
-      <Outlet />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="items" element={<Items />} />
+        <Route path="item" element={<Item />} />
+        <Route path="saved-items" element={<SavedItems />} />
+      </Routes>
     </div>
   );
 }

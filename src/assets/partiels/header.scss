@@ -106,16 +106,16 @@
         color: black;
         font-family: serif;
         text-decoration: none;
-   
-        &:after{
-          content: '';
+
+        &:after {
+          content: "";
           width: 0px;
           transition: all 1s ease;
         }
 
         &:hover {
-          &:after{
-            content: '';
+          &:after {
+            content: "";
             width: 100%;
             height: 2px;
             border-radius: 5px;
@@ -123,6 +123,33 @@
             display: block;
           }
         }
+      }
+    }
+  }
+  a {
+    .counter {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+
+      svg {
+        color: black;
+      }
+
+      p {
+        position: absolute;
+        top: -20px;
+        color: white;
+        border-radius: 50%;
+        left: -8px;
+        background-color: red;
+        width: 15px;
+        height: 15px;
+        font-size: 13px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
     }
   }

@@ -2,10 +2,11 @@ import Logo from "../../assets/img/logo.png";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import SearchIcon from "@mui/icons-material/Search";
-import { useNavigate, NavLink, useLocation } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import "../../assets/partiels/header.scss";
 import { useState, useEffect } from "react";
 import Link from "../Link";
+import SavedItemsCounter from "../SavedItemsCounter";
 
 function Header() {
   const [headerStatus, setHeaderStatus] = useState("closed");
@@ -42,8 +43,8 @@ function Header() {
               }}
             />
           </div>
-          <Link url="/" style="text" text="Home" />
-          <Link url="/items" style="text" text="Products" />
+          <Link url="/" styleLink="text" text="Home" />
+          <Link url="/items" styleLink="text" text="Products" />
         </div>
       </div>
       <form className="search-form">
@@ -55,6 +56,9 @@ function Header() {
           name="search"
         />
       </form>
+      <NavLink to="/saved-items">
+        <SavedItemsCounter />
+      </NavLink>
     </header>
   );
 }

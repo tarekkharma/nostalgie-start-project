@@ -1,0 +1,22 @@
+.products-grid {
+  margin: 50px auto;
+  max-width: 1000px;
+
+  .title {
+    width: 100%;
+    text-align: center;
+
+    h1 {
+      font-size: 35px;
+      font-weight: lighter;
+    }
+  }
+
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+}

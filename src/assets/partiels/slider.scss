@@ -1,67 +1,62 @@
 $slide-num: var(--slide);
 
-.slider-container{
-    position: relative;
+.slider-container {
+  position: relative;
 
-    .images-slider{
-        display: flex;
-        overflow-x: scroll;
-        
-        .image {
-            transition: all 1s ease;
-            transform: translateX($slide-num);
-            min-width: 100%;
+  .images-slider {
+    display: flex;
+    overflow-x: hidden;
 
-            img {
-                width: 100%;
-            }
-        }
+    .image {
+      transition: all 1s ease;
+      transform: translateX($slide-num);
+      min-width: 100%;
+
+      img {
+        width: 100%;
+      }
     }
+  }
 
-    .next-btn {
-        position: absolute;
-        top: 50%;
-        right: 0;
-        cursor: pointer;
+  .next-btn {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    cursor: pointer;
 
-        svg {
-            color: white;
-            font-size: 60px;
-            transition: all 0.1s ease-in-out;
+    svg {
+      color: white;
+      font-size: 60px;
+      transition: all 0.1s ease-in-out;
 
-            &:hover {
-                color: rgba(255, 255, 255, 0.39); 
-            }
+      &:hover {
+        color: rgba(255, 255, 255, 0.39);
+      }
 
-            &.end {
-                color: rgba(255, 255, 255, 0.39); 
-            }
-        }
-
-      
+      &.end {
+        color: rgba(255, 255, 255, 0.39);
+      }
     }
+  }
 
+  .prev-btn {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    cursor: pointer;
 
-    .prev-btn {
-        position: absolute;
-        top: 50%;
-        left: 0;
-        cursor: pointer;
-    
-        svg {
-            color: white;
-            font-size: 60px;
-            transition: all 0.1s ease-in-out;
+    svg {
+      color: white;
+      font-size: 60px;
+      transition: all 0.1s ease-in-out;
 
-            &:hover {
-                color: rgba(255, 255, 255, 0.39); 
-            }
+      &:hover {
+        color: rgba(255, 255, 255, 0.39);
+      }
 
-            &.end {
-                color: rgba(255, 255, 255, 0.39); 
-            }
-        }
-
-      
+      &.end {
+        color: rgba(255, 255, 255, 0.39);
+      }
     }
+  }
 }

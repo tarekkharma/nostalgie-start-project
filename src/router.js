@@ -1,11 +1,10 @@
 import * as React from "react";
-import * as ReactDOM from "react-dom";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter } from "react-router-dom";
 import Home from "./pages/Home";
 import Items from "./pages/Items";
 import Item from "./pages/Item";
 import App from "./App";
-
+import SavedItems from "./pages/SavedItems";
 const router = createBrowserRouter([
   {
     element: <App />,
@@ -21,6 +20,10 @@ const router = createBrowserRouter([
       {
         path: "/item",
         element: <Item />,
+      },
+      {
+        path: "/saved-items",
+        element: <SavedItems />,
       },
     ],
   },

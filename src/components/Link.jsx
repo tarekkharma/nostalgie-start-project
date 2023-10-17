@@ -4,7 +4,7 @@ import ImageBox from "./ImageBox";
 function Link(props) {
   return (
     <NavLink to={props.url}>
-      {props.style === "image" ? (
+      {props.styleLink === "image" ? (
         <ImageBox imageUrl={props.image} text={props.text} />
       ) : (
         props.text

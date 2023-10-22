@@ -5,44 +5,44 @@ import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 
 function Slider() {
-  const [slideNum, setSlideNum] = useState(0);
-  const [nextActiveBtn, setNextActiveBtn] = useState("");
-  const [prevActiveBtn, setPrevActiveBtn] = useState("end");
+  const [currentSlideNum, setcurrentSlideNum] = useState(0);
+  const [nextActiveBtn, setNextActiveBtn] = useState(true);
+  const [prevActiveBtn, setPrevActiveBtn] = useState(false);
   const [operation, setOperation] = useState(0);
   useEffect(() => {
     const myInterval = setInterval(() => {
-      if (slideNum === -8) {
+      if (currentSlideNum === -2) {
         setOperation(1);
       }
-      if (slideNum === -1) {
+      if (currentSlideNum === -1) {
         setOperation(0);
       }
       if (operation === 0) {
-        setSlideNum((prev) => prev - 1);
-        console.log(operation, slideNum);
+        setcurrentSlideNum((prev) => prev - 1);
+        console.log(operation, currentSlideNum);
       } else {
-        setSlideNum((prev) => prev + 1);
-        console.log(operation, slideNum);
+        setcurrentSlideNum((prev) => prev + 1);
+        console.log(operation, currentSlideNum);
       }
     }, 3000);
     return () => clearInterval(myInterval);
-  }, [operation, slideNum]);
+  }, []);
 
   const nextSlide = () => {
-    if (slideNum > -9) {
+    if (currentSlideNum > -9) {
       setNextActiveBtn("");
       setPrevActiveBtn("");
-      setSlideNum(slideNum - 1);
+      setcurrentSlideNum(currentSlideNum - 1);
     } else {
       setNextActiveBtn("end");
     }
   };
 
   const prevSlide = () => {
-    if (slideNum < 0) {
+    if (currentSlideNum < 0) {
       setPrevActiveBtn("");
       setNextActiveBtn("");
-      setSlideNum(slideNum + 1);
+      setcurrentSlideNum(currentSlideNum + 1);
     } else {
       setPrevActiveBtn("end");
     }
@@ -51,38 +51,36 @@ function Slider() {
   return (
     <div
       className="slider-container"
-      style={{ "--slide": slideNum * 100 + "%" }}
+      style={{ "--slide": currentSlideNum * 100 + "%" }}
     >
       <div className="images-slider">
         <div className="image">
-          <img src={Slide} alt="slider-image" />
+          <img
+            src="https://dummyimage.com/600x400/000/fff
+"
+            alt="slider-image"
+          />
         </div>
         <div className="image">
-          <img src={Slide} alt="slider-image" />
+          <img
+            src="https://dummyimage.com/600x400/000/fff
+"
+            alt="slider-image"
+          />
         </div>
         <div className="image">
-          <img src={Slide} alt="slider-image" />
+          <img
+            src="https://dummyimage.com/600x400/000/fff
+"
+            alt="slider-image"
+          />
         </div>
         <div className="image">
-          <img src={Slide} alt="slider-image" />
-        </div>
-        <div className="image">
-          <img src={Slide} alt="slider-image" />
-        </div>
-        <div className="image">
-          <img src={Slide} alt="slider-image" />
-        </div>
-        <div className="image">
-          <img src={Slide} alt="slider-image" />
-        </div>
-        <div className="image">
-          <img src={Slide} alt="slider-image" />
-        </div>
-        <div className="image">
-          <img src={Slide} alt="slider-image" />
-        </div>
-        <div className="image">
-          <img src={Slide} alt="slider-image" />
+          <img
+            src="https://dummyimage.com/600x400/000/fff
+"
+            alt="slider-image"
+          />
         </div>
       </div>
       <div className="next-btn">

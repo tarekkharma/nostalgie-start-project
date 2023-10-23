@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { getSlides } from "../stores/savedItems";
 import { useSelector } from "react-redux/es/hooks/useSelector";
 import "../assets/partiels/slider.scss";
@@ -10,8 +10,6 @@ function Slider() {
   const slides = useSelector(getSlides());
 
   const [slideNum, setSlideNum] = useState(0);
-  const [nextActiveBtn, setNextActiveBtn] = useState("");
-  const [prevActiveBtn, setPrevActiveBtn] = useState("");
   const [operation, setOperation] = useState("forward");
   const [isRunning, setIsRunning] = useState(1);
 
@@ -39,33 +37,43 @@ function Slider() {
 
   const nextSlide = () => {
     if (slideNum > slides.length * -1 + 1) {
-      setNextActiveBtn("");
-      setPrevActiveBtn("");
       setSlideNum(slideNum - 1);
       setIsRunning(0);
-      setTimeout(() => {
-        setIsRunning(1);
-      }, 3000);
     } else {
-      setNextActiveBtn("end");
+      setSlideNum(0);
     }
-    console.log(slideNum + "next");
   };
 
   const prevSlide = () => {
     if (slideNum < 0) {
-      setPrevActiveBtn("");
-      setNextActiveBtn("");
       setSlideNum(slideNum + 1);
       setIsRunning(0);
-      setTimeout(() => {
-        setIsRunning(1);
-      }, 3000);
     } else {
-      setPrevActiveBtn("end");
+      setSlideNum(-(slides.length - 1));
     }
-    console.log(slideNum + "prev");
   };
+
+  const newSlides = useMemo(()=>{
+    return slides.map((slide,index) => {
+      return (
+        <div className={`image ${-slideNum == index ? 'shown' : 'hidden'}`}>
+          <img src={slide.imageUrl} alt="slider" />
+        </div>
+      );
+    })
+  },[slideNum])
+
+  const newCaptions = useMemo(()=>{
+    return slides.map((slide,index) => {
+      return (
+        <div className={`info ${-slideNum == index ? 'shown' : 'hidden'}`}>
+          <h2 className="title">{slide.title}</h2>
+          <p className="subtitle">{slide.subtitle}</p>
+          <NavLink to="/item">Discover</NavLink>
+        </div>
+      );
+    })
+  },[slideNum])
 
   return (
     <div
@@ -73,36 +81,20 @@ function Slider() {
       style={{ "--slide": slideNum * 100 + "%" }}
     >
       <div className="images-slider">
-        {slides.map((slide) => {
-          return (
-            <div className="image">
-              <img src={slide.imageUrl} alt="slider" />
-            </div>
-          );
-        })}
+       {newSlides}
       </div>
       <div className="next-btn">
         <ArrowForwardIosIcon
-          className={nextActiveBtn}
           onClick={() => nextSlide()}
         />
       </div>
       <div className="prev-btn">
         <ArrowBackIosNewIcon
-          className={prevActiveBtn}
           onClick={() => prevSlide()}
         />
       </div>
       <div className="info-slider">
-        {slides.map((slide) => {
-          return (
-            <div className="info">
-              <h2 className="title">{slide.title}</h2>
-              <p className="subtitle">{slide.subtitle}</p>
-              <NavLink to="/item">Discover</NavLink>
-            </div>
-          );
-        })}
+        {newCaptions}
       </div>
     </div>
   );

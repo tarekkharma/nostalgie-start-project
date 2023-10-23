@@ -2,7 +2,6 @@ import "../assets/partiels/categories-list.scss";
 import CategoriesList from "../components/CategoriesList";
 import ProductCard from "../components/ProductCard";
 import Slider from "../components/Slider";
-import Logo from "../assets/img/logo.jpeg";
 import ProductsGrid from "../components/layouts/ProductsGrid";
 import { useSelector } from "react-redux";
 import { getLatestProducts, getFeaturedProducts } from "../stores/savedItems";

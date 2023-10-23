@@ -53,7 +53,7 @@ function Slider() {
   };
 
   const prevSlide = () => {
-    if (slideNum < 0) {
+    if (currentSlideNum < 0) {
       setPrevActiveBtn("");
       setNextActiveBtn("");
       setSlideNum(slideNum + 1);
@@ -70,7 +70,7 @@ function Slider() {
   return (
     <div
       className="slider-container"
-      style={{ "--slide": slideNum * 100 + "%" }}
+      style={{ "--slide": currentSlideNum * 100 + "%" }}
     >
       <div className="images-slider">
         {slides.map((slide) => {

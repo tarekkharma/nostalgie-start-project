@@ -7,8 +7,8 @@ $slide-num: var(--slide);
   .images-slider {
     display: flex;
     position: relative;
-    height: 1000px;
-    
+    height: 106vh;
+
     .image {
       position: absolute;
       top: 0;
@@ -18,13 +18,13 @@ $slide-num: var(--slide);
       img {
         width: 100%;
       }
-      
-      &.shown{
+
+      &.shown {
         display: block;
         animation: fadeIn 2s;
       }
 
-      &.hidden{
+      &.hidden {
         display: none;
         animation: fadeOut 3s;
       }
@@ -104,12 +104,12 @@ $slide-num: var(--slide);
         }
       }
 
-      &.shown{
-         display: block;
+      &.shown {
+        display: block;
         animation: fadeIn 2s;
       }
 
-      &.hidden{
+      &.hidden {
         display: none;
         animation: fadeOut 3s;
       }
@@ -134,4 +134,3 @@ $slide-num: var(--slide);
     opacity: 1;
   }
 }
-

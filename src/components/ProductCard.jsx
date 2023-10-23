@@ -3,7 +3,7 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import "../assets/partiels/product-card.scss";
 import { NavLink } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { saveItem, unsaveItem } from "../stores/savedItems";
+import { saveItem, unsaveItem } from "../stores/store";
 
 function ProductCard(props) {
   const dispatch = useDispatch();

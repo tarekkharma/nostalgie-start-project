@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { getSlides } from "../stores/savedItems";
+import { getSlides } from "../stores/store";
 import { useSelector } from "react-redux/es/hooks/useSelector";
 import "../assets/partiels/slider.scss";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
@@ -33,7 +33,7 @@ function Slider() {
 
       return () => clearInterval(interval);
     }
-  }, [operation, slideNum, isRunning]);
+  }, [operation, slideNum, isRunning, slides.length]);
 
   const nextSlide = () => {
     if (slideNum > slides.length * -1 + 1) {
@@ -53,49 +53,41 @@ function Slider() {
     }
   };
 
-  const newSlides = useMemo(()=>{
-    return slides.map((slide,index) => {
+  const newSlides = useMemo(() => {
+    return slides.map((slide, index) => {
       return (
-        <div className={`image ${-slideNum == index ? 'shown' : 'hidden'}`}>
+        <div className={`image ${-slideNum === index ? "shown" : "hidden"}`}>
           <img src={slide.imageUrl} alt="slider" />
         </div>
       );
-    })
-  },[slideNum])
+    });
+  }, [slideNum, slides]);
 
-  const newCaptions = useMemo(()=>{
-    return slides.map((slide,index) => {
+  const newCaptions = useMemo(() => {
+    return slides.map((slide, index) => {
       return (
-        <div className={`info ${-slideNum == index ? 'shown' : 'hidden'}`}>
+        <div className={`info ${-slideNum === index ? "shown" : "hidden"}`}>
           <h2 className="title">{slide.title}</h2>
           <p className="subtitle">{slide.subtitle}</p>
           <NavLink to="/item">Discover</NavLink>
         </div>
       );
-    })
-  },[slideNum])
+    });
+  }, [slideNum, slides]);
 
   return (
     <div
       className="slider-container"
-      style={{ "--slide": currentSlideNum * 100 + "%" }}
+      style={{ "--slide": slideNum * 100 + "%" }}
     >
-      <div className="images-slider">
-       {newSlides}
-      </div>
+      <div className="images-slider">{newSlides}</div>
       <div className="next-btn">
-        <ArrowForwardIosIcon
-          onClick={() => nextSlide()}
-        />
+        <ArrowForwardIosIcon onClick={() => nextSlide()} />
       </div>
       <div className="prev-btn">
-        <ArrowBackIosNewIcon
-          onClick={() => prevSlide()}
-        />
+        <ArrowBackIosNewIcon onClick={() => prevSlide()} />
       </div>
-      <div className="info-slider">
-        {newCaptions}
-      </div>
+      <div className="info-slider">{newCaptions}</div>
     </div>
   );
 }

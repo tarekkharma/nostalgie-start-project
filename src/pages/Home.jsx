@@ -4,7 +4,7 @@ import ProductCard from "../components/ProductCard";
 import Slider from "../components/Slider";
 import ProductsGrid from "../components/layouts/ProductsGrid";
 import { useSelector } from "react-redux";
-import { getLatestProducts, getFeaturedProducts } from "../stores/savedItems";
+import { getLatestProducts, getFeaturedProducts } from "../stores/store";
 
 function Home() {
   const latestProducts = useSelector(getLatestProducts(3));

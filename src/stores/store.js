@@ -1,6 +1,6 @@
 import Logo from "../assets/img/logo.jpeg";
 import Slide from "../assets/img/slide.jpeg";
-import { createStore, combineReducers } from "redux";
+import { createStore } from "redux";
 
 const initialState = {
   savedItems: JSON.parse(localStorage.getItem("saved-items") || "[]"),

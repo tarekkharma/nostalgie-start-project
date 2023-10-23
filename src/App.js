@@ -4,7 +4,7 @@ import SavedItems from "./pages/SavedItems";
 import Home from "./pages/Home";
 import Items from "./pages/Items";
 import Item from "./pages/Item";
-import Footer from "./components/layouts/footer";
+import Footer from "./components/layouts/Footer";
 
 function App() {
   return (

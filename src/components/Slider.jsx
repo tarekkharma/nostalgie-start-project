@@ -78,7 +78,7 @@ function Slider() {
   return (
     <div
       className="slider-container"
-      style={{ "--slide": slideNum * 100 + "%" }}
+      style={{ "--slide": currentSlideNum * 100 + "%" }}
     >
       <div className="images-slider">
        {newSlides}

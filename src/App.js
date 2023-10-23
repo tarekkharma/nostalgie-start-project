@@ -4,6 +4,7 @@ import SavedItems from "./pages/SavedItems";
 import Home from "./pages/Home";
 import Items from "./pages/Items";
 import Item from "./pages/Item";
+import Footer from "./components/layouts/footer";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="item" element={<Item />} />
         <Route path="saved-items" element={<SavedItems />} />
       </Routes>
+      <Footer />
     </div>
   );
 }

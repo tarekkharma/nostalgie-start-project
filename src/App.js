@@ -4,7 +4,9 @@ import SavedItems from "./pages/SavedItems";
 import Home from "./pages/Home";
 import Items from "./pages/Items";
 import Item from "./pages/Item";
+import Blogs from "./pages/Blogs";
 import Footer from "./components/layouts/Footer";
+import Blog from "./pages/Blog";
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
         <Route path="items" element={<Items />} />
         <Route path="item" element={<Item />} />
         <Route path="saved-items" element={<SavedItems />} />
+        <Route path="blogs" element={<Blogs />} />
+        <Route path="blogs/:blogId" element={<Blog />} />
       </Routes>
       <Footer />
     </div>

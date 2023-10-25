@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import "../../assets/partiels/products-grid.scss";
 
 function ProductsGrid(props) {
@@ -7,6 +8,9 @@ function ProductsGrid(props) {
         <h1>{props.title}</h1>
       </div>
       <div className="content">{props.children}</div>
+      <div className="blog-footer">
+        <NavLink to="blogs">{props.footer}</NavLink>
+      </div>
     </section>
   );
 }

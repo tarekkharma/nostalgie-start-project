@@ -1,0 +1,48 @@
+.blog-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 250px;
+  height: 370px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  position: relative;
+  text-decoration: none;
+
+  &:hover {
+    box-shadow: 5px 5px 5px rgba($color: #000000, $alpha: 0.2);
+  }
+
+  .header {
+    img {
+      width: 100%;
+    }
+  }
+
+  .body {
+    text-align: center;
+    h3 {
+      margin: 0;
+      margin-top: 5px;
+      color: black;
+    }
+
+    .summary {
+      margin: 0;
+      margin-top: 5px;
+      color: black;
+    }
+  }
+  .footer {
+    margin-top: 15px;
+    a {
+      text-decoration: none;
+      color: white;
+      background-color: #ffba52;
+      border-radius: 5px;
+      padding: 5px 10px;
+      font-family: math;
+    }
+  }
+}

@@ -45,6 +45,7 @@ function Header() {
           </div>
           <Link url="/" styleLink="text" text="Home" />
           <Link url="/items" styleLink="text" text="Products" />
+          <Link url="/blogs" styleLink="text" text="Blogs" />
         </div>
       </div>
       <form className="search-form">

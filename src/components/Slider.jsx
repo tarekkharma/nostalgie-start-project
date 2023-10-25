@@ -16,8 +16,6 @@ function Slider() {
   useEffect(() => {
     if (isRunning === 1) {
       const interval = setInterval(() => {
-        console.log(slideNum);
-        console.log(slides.length * -1 + 2);
         if (slideNum <= slides.length * -1 + 2) {
           setOperation("backward");
         }

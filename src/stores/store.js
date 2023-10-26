@@ -4,54 +4,80 @@ import { createStore } from "redux";
 
 const initialState = {
   savedItems: JSON.parse(localStorage.getItem("saved-items") || "[]"),
+  categories: [
+    { id: 1, name: "vases", subCategories: null },
+    { id: 2, name: "caskets & boxes", subCategories: null },
+    { id: 3, name: "perfume bottles", subCategories: null },
+    {
+      id: 4,
+      name: "plates & dinnerware",
+      subCategories: ["plates", "tazza bowls"],
+    },
+    {
+      id: 5,
+      name: "drinkware",
+      subCategories: ["decanters", "goblets", "glasses & cups", "ewers"],
+    },
+    { id: 6, name: "centerpieces", subCategories: null },
+    { id: 7, name: "bowls", subCategories: ["punch bowls", "sugar bowls"] },
+    { id: 8, name: "hookah bases", subCategories: null },
+  ],
   products: [
     {
       id: 1,
       title: "product 1",
       imageUrl: Logo,
       featured: true,
+      categories: ["centerpieces", "punch bowls"],
     },
     {
       id: 2,
       title: "product 2",
       imageUrl: Logo,
       featured: true,
+      categories: ["vases"],
     },
     {
       id: 3,
       title: "product 3",
       imageUrl: Logo,
       featured: true,
+      categories: ["perfume bottles", "decanters"],
     },
     {
       id: 4,
       title: "product 4",
       imageUrl: Logo,
       featured: true,
+      categories: ["vases"],
     },
     {
       id: 5,
       title: "product 5",
       imageUrl: Logo,
       featured: true,
+      categories: ["decanters"],
     },
     {
       id: 6,
       title: "product 6",
       imageUrl: Logo,
       featured: false,
+      categories: ["goblets", "sugar bowls"],
     },
     {
       id: 7,
       title: "product 7",
       imageUrl: Logo,
       featured: false,
+      categories: ["vases", "glasses & cups"],
     },
     {
       id: 8,
       title: "product 8",
       imageUrl: Logo,
       featured: false,
+      categories: ["centerpieces", "goblets"],
     },
   ],
   slides: [
@@ -330,6 +356,15 @@ const initialState = {
         "Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua",
     },
   ],
+};
+
+export const getCategories = () => (state) => {
+  return state.categories;
+};
+
+export const getSubCategories = (categorieId) => (state) => {
+  return state.categories.filter((category) => category.id == categorieId)
+    .subCategories;
 };
 
 export const getFeaturedBlogs = () => (state) => {

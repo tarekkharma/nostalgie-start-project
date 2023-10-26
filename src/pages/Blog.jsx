@@ -8,7 +8,8 @@ function Blog() {
 
   const blog = useSelector(getBlogs()).find((element) => element.id == blogId);
 
-  console.log(blogId);
+  console.log(typeof blogId);
+  console.log(typeof blog.id);
 
   return (
     <div className="blog-container">

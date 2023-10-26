@@ -17,7 +17,7 @@ function SavedItems() {
             return (
               <ProductCard
                 id={item}
-                url="/items"
+                url="/item"
                 image={Logo}
                 title={"product " + item}
               />

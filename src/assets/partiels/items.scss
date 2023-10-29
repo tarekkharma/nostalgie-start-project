@@ -1,0 +1,38 @@
+.items {
+  display: flex;
+
+  .products-grid {
+    width: 75%;
+    float: right;
+  }
+
+  .filters {
+    display: inline-flex;
+
+    &:after {
+      content: "";
+      height: 80%;
+      width: 1px;
+      border-right: 1px solid lightgrey;
+      margin-top: 35px;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      justify-content: start;
+      align-items: start;
+
+      .categories {
+        list-style: none;
+        padding: 0;
+        border-bottom: 1px solid lightgrey;
+        padding-bottom: 30px;
+
+        li {
+        }
+      }
+    }
+  }
+}

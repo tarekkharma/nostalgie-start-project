@@ -10,7 +10,7 @@ function ProductCard(props) {
   const savedItems = useSelector((state) => state.savedItems);
 
   return (
-    <NavLink to="/item" className="product-card">
+    <NavLink to={"/items/" + props.id} className="product-card">
       <div className="header">
         <img src={props.image} alt={props.title} />
       </div>

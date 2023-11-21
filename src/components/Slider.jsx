@@ -5,7 +5,6 @@ import "../assets/partiels/slider.scss";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import { NavLink } from "react-router-dom";
-
 function Slider() {
   const slides = useSelector(getSlides());
 

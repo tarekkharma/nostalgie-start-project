@@ -1,0 +1,66 @@
+.item {
+  .item-display {
+    margin: 30px 50px;
+    display: flex;
+    .images {
+      flex: 1.5;
+    }
+    .info {
+      flex: 1;
+    }
+  }
+  .details {
+    display: flex;
+    background-color: rgb(245, 245, 245);
+    color: #2b2b2b;
+
+    .description {
+      margin-left: 70px;
+      margin-right: 70px;
+      flex: 1.8;
+
+      h3 {
+        font-weight: 600;
+      }
+      p {
+        color: gray;
+      }
+    }
+    .dimentions {
+      margin-right: 70px;
+      margin-left: 20px;
+      flex: 1;
+
+      h3 {
+        font-weight: 600;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+        h4 {
+          margin-bottom: 0;
+          font-weight: 600;
+        }
+        p {
+          margin-top: 5px;
+          color: gray;
+        }
+      }
+    }
+  }
+  .shipping {
+    background-color: rgb(245, 245, 245);
+    padding: 30px 70px;
+    h3 {
+      color: #2b2b2b;
+      margin-top: 0;
+
+      font-weight: 600;
+    }
+    p {
+      color: gray;
+      margin: 0;
+    }
+  }
+}

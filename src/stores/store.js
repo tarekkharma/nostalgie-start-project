@@ -26,58 +26,388 @@ const initialState = {
     {
       id: 1,
       title: "product 1",
+      subtitle:
+        "kbdhufg kuoeurg uhogerg oif oiherg oihg g j ohgeohgerg ehroepg oheprger lerooger",
       imageUrl: Logo,
+      subImages: [Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo],
       featured: true,
       categories: ["centerpieces", "punch bowls"],
+      description:
+        "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+      dimensions: ["50 cm", "25 cm", "15 cm"],
     },
     {
       id: 2,
       title: "product 2",
+      subtitle:
+        "kbdhufg kuoeurg uhogerg oif oiherg oihg g j ohgeohgerg ehroepg oheprger lerooger",
+
       imageUrl: Logo,
+      subImages: [Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo],
       featured: true,
       categories: ["vases"],
+      description:
+        "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+      dimensions: ["50 cm", "25 cm"],
     },
     {
       id: 3,
       title: "product 3",
+      subtitle:
+        "kbdhufg kuoeurg uhogerg oif oiherg oihg g j ohgeohgerg ehroepg oheprger lerooger",
+
       imageUrl: Logo,
+      subImages: [Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo],
+
       featured: true,
       categories: ["perfume bottles", "decanters"],
+      description:
+        "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+      dimensions: ["50 cm", "25 cm", "15 cm"],
     },
     {
       id: 4,
       title: "product 4",
+      subtitle:
+        "kbdhufg kuoeurg uhogerg oif oiherg oihg g j ohgeohgerg ehroepg oheprger lerooger",
+
       imageUrl: Logo,
+      subImages: [Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo],
+
       featured: true,
       categories: ["vases"],
+      description:
+        "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+      dimensions: ["50 cm", "25 cm"],
     },
     {
       id: 5,
       title: "product 5",
+      subtitle:
+        "kbdhufg kuoeurg uhogerg oif oiherg oihg g j ohgeohgerg ehroepg oheprger lerooger",
+
       imageUrl: Logo,
+      subImages: [Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo],
+
       featured: true,
       categories: ["decanters"],
+      description:
+        "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+      dimensions: ["50 cm", "25 cm", "15 cm"],
     },
     {
       id: 6,
       title: "product 6",
+      subtitle:
+        "kbdhufg kuoeurg uhogerg oif oiherg oihg g j ohgeohgerg ehroepg oheprger lerooger",
+
       imageUrl: Logo,
+      subImages: [Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo],
+
       featured: false,
       categories: ["goblets", "sugar bowls"],
+      description:
+        "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+      dimensions: ["50 cm", "25 cm"],
     },
     {
       id: 7,
       title: "product 7",
+      subtitle:
+        "kbdhufg kuoeurg uhogerg oif oiherg oihg g j ohgeohgerg ehroepg oheprger lerooger",
+
       imageUrl: Logo,
+      subImages: [Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo],
+
       featured: false,
       categories: ["vases", "glasses & cups"],
+      description:
+        "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+      dimensions: ["50 cm", "25 cm", "15 cm"],
     },
     {
       id: 8,
       title: "product 8",
+      subtitle:
+        "kbdhufg kuoeurg uhogerg oif oiherg oihg g j ohgeohgerg ehroepg oheprger lerooger",
+
       imageUrl: Logo,
+      subImages: [Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo],
+
       featured: false,
       categories: ["centerpieces", "goblets"],
+      description:
+        "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+      dimensions: ["50 cm", "25 cm"],
+    },
+    {
+      id: 9,
+      title: "product 9",
+      subtitle:
+        "kbdhufg kuoeurg uhogerg oif oiherg oihg g j ohgeohgerg ehroepg oheprger lerooger",
+
+      imageUrl: Logo,
+      subImages: [Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo],
+
+      featured: false,
+      categories: ["vases", "goblets"],
+      description:
+        "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+      dimensions: ["50 cm", "25 cm", "15 cm"],
+    },
+    {
+      id: 10,
+      title: "product 10",
+      subtitle:
+        "kbdhufg kuoeurg uhogerg oif oiherg oihg g j ohgeohgerg ehroepg oheprger lerooger",
+
+      imageUrl: Logo,
+      subImages: [Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo],
+
+      featured: false,
+      categories: ["centerpieces"],
+      description:
+        "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+      dimensions: ["50 cm", "25 cm"],
+    },
+    {
+      id: 11,
+      title: "product 11",
+      subtitle:
+        "kbdhufg kuoeurg uhogerg oif oiherg oihg g j ohgeohgerg ehroepg oheprger lerooger",
+
+      imageUrl: Logo,
+      subImages: [Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo],
+
+      featured: false,
+      categories: ["vases", "centerpieces"],
+      description:
+        "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+      dimensions: ["50 cm", "25 cm", "15 cm"],
+    },
+    {
+      id: 12,
+      title: "product 12",
+      subtitle:
+        "kbdhufg kuoeurg uhogerg oif oiherg oihg g j ohgeohgerg ehroepg oheprger lerooger",
+
+      imageUrl: Logo,
+      subImages: [Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo],
+
+      featured: false,
+      categories: ["punch bowls"],
+      description:
+        "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+      dimensions: ["50 cm", "25 cm"],
+    },
+    {
+      id: 13,
+      title: "product 13",
+      subtitle:
+        "kbdhufg kuoeurg uhogerg oif oiherg oihg g j ohgeohgerg ehroepg oheprger lerooger",
+
+      imageUrl: Logo,
+      subImages: [Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo],
+
+      featured: true,
+      categories: ["hookah bases", "vases"],
+      description:
+        "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+      dimensions: ["50 cm", "25 cm", "15 cm"],
+    },
+    {
+      id: 14,
+      title: "product 14",
+      subtitle:
+        "kbdhufg kuoeurg uhogerg oif oiherg oihg g j ohgeohgerg ehroepg oheprger lerooger",
+
+      imageUrl: Logo,
+      subImages: [Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo],
+
+      featured: true,
+      categories: ["vases"],
+      description:
+        "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+      dimensions: ["50 cm", "25 cm"],
+    },
+    {
+      id: 15,
+      title: "product 15",
+      subtitle:
+        "kbdhufg kuoeurg uhogerg oif oiherg oihg g j ohgeohgerg ehroepg oheprger lerooger",
+
+      imageUrl: Logo,
+      subImages: [Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo],
+
+      featured: true,
+      categories: ["vases", "goblets"],
+      description:
+        "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+      dimensions: ["50 cm", "25 cm", "15 cm"],
+    },
+    {
+      id: 16,
+      title: "product 16",
+      subtitle:
+        "kbdhufg kuoeurg uhogerg oif oiherg oihg g j ohgeohgerg ehroepg oheprger lerooger",
+
+      imageUrl: Logo,
+      subImages: [Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo],
+
+      featured: false,
+      categories: ["perfume bottles", "decanters"],
+      description:
+        "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+      dimensions: ["50 cm", "25 cm"],
+    },
+    {
+      id: 17,
+      title: "product 17",
+      subtitle:
+        "kbdhufg kuoeurg uhogerg oif oiherg oihg g j ohgeohgerg ehroepg oheprger lerooger",
+
+      imageUrl: Logo,
+      subImages: [Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo],
+
+      featured: false,
+      categories: ["perfume bottles"],
+      description:
+        "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+      dimensions: ["50 cm", "25 cm", "15 cm"],
+    },
+    {
+      id: 18,
+      title: "product 18",
+      subtitle:
+        "kbdhufg kuoeurg uhogerg oif oiherg oihg g j ohgeohgerg ehroepg oheprger lerooger",
+
+      imageUrl: Logo,
+      subImages: [Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo],
+
+      featured: true,
+      categories: ["centerpieces", "goblets"],
+      description:
+        "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+      dimensions: ["50 cm", "25 cm"],
+    },
+    {
+      id: 19,
+      title: "product 19",
+      subtitle:
+        "kbdhufg kuoeurg uhogerg oif oiherg oihg g j ohgeohgerg ehroepg oheprger lerooger",
+
+      imageUrl: Logo,
+      subImages: [Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo],
+
+      featured: false,
+      categories: ["tazza bowls", "centerpieces"],
+      description:
+        "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+      dimensions: ["50 cm", "25 cm", "15 cm"],
+    },
+    {
+      id: 20,
+      title: "product 20",
+      subtitle:
+        "kbdhufg kuoeurg uhogerg oif oiherg oihg g j ohgeohgerg ehroepg oheprger lerooger",
+
+      imageUrl: Logo,
+      subImages: [Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo],
+
+      featured: true,
+      categories: ["tazza bowls"],
+      description:
+        "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+      dimensions: ["50 cm", "25 cm"],
+    },
+    {
+      id: 21,
+      title: "product 21",
+      subtitle:
+        "kbdhufg kuoeurg uhogerg oif oiherg oihg g j ohgeohgerg ehroepg oheprger lerooger",
+
+      imageUrl: Logo,
+      subImages: [Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo],
+      featured: false,
+      categories: ["caskets & boxes", "sugar bowls"],
+      description:
+        "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+      dimensions: ["50 cm", "25 cm", "15 cm"],
+    },
+    {
+      id: 22,
+      title: "product 22",
+      subtitle:
+        "kbdhufg kuoeurg uhogerg oif oiherg oihg g j ohgeohgerg ehroepg oheprger lerooger",
+
+      imageUrl: Logo,
+      subImages: [Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo],
+
+      featured: false,
+      categories: ["caskets & boxes"],
+      description:
+        "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+      dimensions: ["50 cm", "25 cm"],
+    },
+    {
+      id: 23,
+      title: "product 23",
+      subtitle:
+        "kbdhufg kuoeurg uhogerg oif oiherg oihg g j ohgeohgerg ehroepg oheprger lerooger",
+
+      imageUrl: Logo,
+      subImages: [Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo],
+
+      featured: false,
+      categories: ["centerpieces", "goblets"],
+      description:
+        "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+      dimensions: ["50 cm", "25 cm", "15 cm"],
+    },
+    {
+      id: 24,
+      title: "product 24",
+      subtitle:
+        "kbdhufg kuoeurg uhogerg oif oiherg oihg g j ohgeohgerg ehroepg oheprger lerooger",
+
+      imageUrl: Logo,
+      subImages: [Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo],
+
+      featured: true,
+      categories: ["tazza bowls"],
+      description:
+        "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+      dimensions: ["50 cm", "25 cm"],
+    },
+    {
+      id: 25,
+      title: "product 25",
+      subtitle:
+        "kbdhufg kuoeurg uhogerg oif oiherg oihg g j ohgeohgerg ehroepg oheprger lerooger",
+
+      imageUrl: Logo,
+      subImages: [Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo],
+
+      featured: true,
+      categories: ["vases"],
+      description:
+        "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+      dimensions: ["50 cm", "25 cm", "15 cm"],
+    },
+    {
+      id: 26,
+      title: "product 26",
+      subtitle:
+        "kbdhufg kuoeurg uhogerg oif oiherg oihg g j ohgeohgerg ehroepg oheprger lerooger",
+
+      imageUrl: Logo,
+      subImages: [Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo, Logo],
+
+      featured: false,
+      categories: ["hookah bases"],
+      description:
+        "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+      dimensions: ["50 cm", "25 cm"],
     },
   ],
   slides: [

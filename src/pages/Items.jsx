@@ -112,7 +112,7 @@ function Items() {
 
   const filteredProducts = useMemo(() => {
     if (selectedCategories.length == 0) {
-      const riri = products.map((item, index) => {
+      const allItems = products.map((item, index) => {
         return (
           <ProductCard
             key={index}
@@ -123,24 +123,29 @@ function Items() {
           />
         );
       });
-      return riri;
+      return allItems;
     } else {
-      return selectedCategories.flatMap((category) => {
-        const sisi = products.map((item, index) => {
-          if (item.categories.includes(category)) {
-            return (
-              <ProductCard
-                key={index}
-                id={item.id}
-                url="/item"
-                image={item.imageUrl}
-                title={"product " + item.id}
-              />
-            );
-          }
-        });
-        return sisi.filter((item) => item !== undefined);
+      const filteredObjects = selectedCategories.flatMap((category) => {
+        return products.filter((item) => item.categories.includes(category));
       });
+
+      const uniqueObjects = Array.from(
+        filteredObjects
+          .reduce((map, obj) => map.set(obj.id, obj), new Map())
+          .values()
+      ).map((item, index) => {
+        return (
+          <ProductCard
+            key={index}
+            id={item.id}
+            url="/item"
+            image={item.imageUrl}
+            title={"product " + item.id}
+          />
+        );
+      });
+
+      return uniqueObjects;
     }
   }, [selectedCategories]);
 
@@ -200,9 +205,7 @@ function Items() {
           <ul className="pagination">
             {currentPage !== 1 && (
               <li className="page-item" onClick={prevPage}>
-                <a href="#" className="page-link">
-                  Prev
-                </a>
+                Prev
               </li>
             )}
 
@@ -213,17 +216,13 @@ function Items() {
                   key={i}
                   onClick={() => changePage(n)}
                 >
-                  <a href="#" className="page-link">
-                    {n}
-                  </a>
+                  {n}
                 </li>
               );
             })}
             {currentPage !== npage && items.length !== 0 && (
               <li className="page-item" onClick={nextPage}>
-                <a href="#" className="page-link">
-                  Next
-                </a>
+                Next
               </li>
             )}
           </ul>

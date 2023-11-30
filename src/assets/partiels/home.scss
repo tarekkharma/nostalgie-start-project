@@ -1,0 +1,36 @@
+.about-us {
+  .about-us-title {
+  }
+  .about-us-text {
+    margin-bottom: 50px;
+  }
+  .about-us-images {
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .image-container {
+      height: 320px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+
+      img {
+        position: absolute;
+        bottom: 0;
+      }
+
+      .first-image {
+        padding-bottom: 25px;
+      }
+      .second-image {
+        z-index: 10;
+      }
+      .third-image {
+        padding-bottom: 25px;
+      }
+    }
+  }
+}

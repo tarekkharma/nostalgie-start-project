@@ -20,7 +20,9 @@ function ItemDisplayCard(props) {
     <div className="card-container">
       <h2 className="item-title">{props.title}</h2>
       <p className="sub-title">{props.subtitle}</p>
-      <button className="demand-price">DEMAND PRICE</button>
+      <button className="demand-price" onClick={() => props.showPopUp(true)}>
+        DEMAND PRICE
+      </button>
       <button
         className="save-item"
         onClick={() => {
@@ -31,7 +33,9 @@ function ItemDisplayCard(props) {
       </button>
       <p className="questions">QUESTIONS ABOUT THIS ITEM?</p>
       <div className="question-or-contact">
-        <button className="ask-question">ASK A QUESTION</button>
+        <button className="ask-question" onClick={() => props.showPopUp(true)}>
+          ASK A QUESTION
+        </button>
         <div className="contact">
           <ul>
             <li>

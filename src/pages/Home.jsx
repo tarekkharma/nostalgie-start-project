@@ -10,12 +10,35 @@ import {
   getFeaturedBlogs,
 } from "../stores/store";
 import BlogCard from "../components/BlogCard";
-import { NavLink } from "react-router-dom";
+import image1 from "../assets/img/DSC_0552.png";
+import image2 from "../assets/img/DSC_0397.png";
+import image3 from "../assets/img/DSC_0824.png";
+import "../assets/partiels/home.scss";
+import { useState, useEffect } from "react";
 
 function Home() {
   const latestProducts = useSelector(getLatestProducts(3));
   const featuredProducts = useSelector(getFeaturedProducts(2));
   const featuredBlogs = useSelector(getFeaturedBlogs());
+
+  const [mousePosition, setMousePosition] = useState({
+    x: null,
+    y: null,
+  });
+
+  useEffect(() => {
+    const updateMousePosition = (ev) => {
+      setMousePosition({ x: ev.clientX, y: ev.clientY });
+    };
+    window.addEventListener("mousemove", updateMousePosition);
+    return () => {
+      window.removeEventListener("mousemove", updateMousePosition);
+    };
+  }, []);
+
+  const Margin = () => {
+    return 28 + mousePosition.x / 100 + "%";
+  };
 
   return (
     <div>
@@ -61,6 +84,39 @@ function Home() {
           );
         })}
       </ProductsGrid>
+      <div className="about-us">
+        <h2 className="about-us-title">ABOUT US</h2>
+        <p className="about-us-text">
+          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+          nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+          sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
+          rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
+          ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
+          sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+          dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
+          et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
+          takimata sanctus est Lorem ipsum dolor sit amet.
+        </p>
+        <div className="about-us-images">
+          <div className="image-container">
+            <img
+              className="first-image"
+              src={image1}
+              alt=""
+              height="270px"
+              style={{ left: Margin() }}
+            />
+            <img className="second-image" src={image2} alt="" height="330px" />
+            <img
+              className="third-image"
+              src={image3}
+              alt=""
+              height="270px"
+              style={{ right: Margin() }}
+            />
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

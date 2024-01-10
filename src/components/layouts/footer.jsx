@@ -6,7 +6,7 @@ import "../../assets/partiels/footer.scss";
 function Footer() {
   return (
     <div className="footer-container">
-      <div className="footer">
+      <div className="footer container">
         <div className="footer-info">
           <h3>HELP & INFO</h3>
           <ul>

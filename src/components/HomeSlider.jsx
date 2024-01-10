@@ -1,22 +1,26 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState, useRef } from "react";
+import { getSlides } from "../stores/store";
+import { useSelector } from "react-redux/es/hooks/useSelector";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
-import "../assets/partiels/item-slider.scss";
+import "../assets/partiels/home-slider.scss";
 
-function ItemSilder(props) {
-  const slides = props.images;
+function HomeSlider() {
+  const slides = useSelector(getSlides());
 
   const [visibleSlide, setVisibleSlide] = useState(1);
   const [hasTransitionClass, setHasTransitionClass] = useState(true);
   const [stateSlides, setStateSlides] = useState(slides);
   const [leftAndRightDisabled, setLeftAndRightDisabled] = useState(false);
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+  const intervalId = useRef(null);
 
   useEffect(() => {
     const slidesWithClones = [...slides];
     slidesWithClones.unshift(slidesWithClones[slidesWithClones.length - 1]);
     slidesWithClones.push(slidesWithClones[1]);
     setStateSlides(slidesWithClones);
+    startScroll();
   }, []);
 
   useEffect(() => {
@@ -31,20 +35,6 @@ function ItemSilder(props) {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
-
-  const conditionalMargin = useMemo(() => {
-    if (screenWidth <= 576) {
-      return screenWidth - 30;
-    } else if (screenWidth > 576 && screenWidth <= 768) {
-      return 510;
-    } else if (screenWidth > 768 && screenWidth <= 992) {
-      return 690;
-    } else if (screenWidth > 992 && screenWidth <= 1200) {
-      return 600;
-    } else {
-      return 750;
-    }
-  }, [screenWidth]);
 
   useEffect(() => {
     if (visibleSlide == stateSlides.length - 1) {
@@ -76,6 +66,21 @@ function ItemSilder(props) {
     }
   }, [visibleSlide]);
 
+  const startScroll = () => {
+    if (intervalId.current != null) {
+      return;
+    }
+    intervalId.current = setInterval(() => {
+      setVisibleSlide((prevVisibleSlide) => {
+        return prevVisibleSlide + 1;
+      });
+    }, 3000);
+  };
+
+  const stopScroll = () => {
+    clearInterval(intervalId.current);
+  };
+
   useEffect(() => {
     if (leftAndRightDisabled) {
       setTimeout(() => {
@@ -85,88 +90,57 @@ function ItemSilder(props) {
   }, [leftAndRightDisabled]);
 
   const slideLeftMargin = () => {
-    return "-" + visibleSlide * conditionalMargin + "px";
+    return "-" + visibleSlide * screenWidth + "px";
   };
 
   const scrollLeft = () => {
     setVisibleSlide(visibleSlide - 1);
+    stopScroll();
   };
 
   const scrollRight = () => {
     setVisibleSlide(visibleSlide + 1);
-  };
-
-  const slideIsActive = (index) => {
-    return (
-      index === visibleSlide ||
-      (index === 1 && visibleSlide === stateSlides.length - 1) ||
-      (index === stateSlides.length - 2 && visibleSlide === 0)
-    );
+    stopScroll();
   };
 
   return (
-    <div className="image-container">
-      <div className="image-slider">
+    <div
+      className="home-slider-container"
+      style={{ width: screenWidth + "px" }}
+    >
+      <div className="home-slider">
         <div
-          className={`scroll-right ${leftAndRightDisabled ? "disabled" : ""}`}
+          className={`right-arrow ${leftAndRightDisabled ? "disabled" : ""}`}
         >
           <ArrowForwardIosIcon
             onClick={!leftAndRightDisabled ? scrollRight : null}
           />
         </div>
-        <div
-          className={`scroll-left ${leftAndRightDisabled ? "disabled" : ""}`}
-        >
+        <div className={`left-arrow ${leftAndRightDisabled ? "disabled" : ""}`}>
           <ArrowBackIosNewIcon
             onClick={!leftAndRightDisabled ? scrollLeft : null}
           />
         </div>
         <div
           id="slides"
-          className={`slides ${hasTransitionClass ? "transition" : ""}`}
+          className={`home-slides ${hasTransitionClass ? "transition" : ""}`}
           style={{ left: slideLeftMargin() }}
         >
           {stateSlides.map((slide, index) => {
             return (
               <div
                 key={index}
-                className="slide"
-                style={{ width: conditionalMargin + "px" }}
+                className="slide-container"
+                style={{ width: screenWidth + "px" }}
               >
-                <img src={slide} alt="slide" className="slide-inner" />
+                <img src={slide.imageUrl} alt="slide" className="slide-image" />
               </div>
             );
           })}
         </div>
       </div>
-      <div className="sub-images">
-        {stateSlides.map((slide, index) => {
-          if (index === 0 || index === stateSlides.length - 1) {
-            return null;
-          }
-          return (
-            <div
-              key={index}
-              className={`sub-image ${slideIsActive(index) ? "active" : ""}`}
-              onClick={() => setVisibleSlide(index)}
-            >
-              <img src={slide} alt="sub-image" />
-            </div>
-          );
-        })}
-      </div>
-      <div className="imageNum">
-        <p>
-          {visibleSlide == 0
-            ? stateSlides.length - 2
-            : visibleSlide == stateSlides.length - 1
-            ? 1
-            : visibleSlide}{" "}
-          of {stateSlides.length - 2}
-        </p>
-      </div>
     </div>
   );
 }
 
-export default ItemSilder;
+export default HomeSlider;

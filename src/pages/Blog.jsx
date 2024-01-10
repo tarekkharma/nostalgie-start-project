@@ -9,21 +9,23 @@ function Blog() {
   const blog = useSelector(getBlogs()).find((element) => element.id == blogId);
 
   return (
-    <div className="blog-container">
-      <div className="blog-header">
-        <h1>{blog.title}</h1>
-        <img src={blog.cardImage} height="350px" />
-      </div>
-      <div className="blog-body">
-        <p>{blog.introduction}</p>
-        {blog.sections.map((section) => {
-          return (
-            <div className={section.name}>
-              <img src={section.image} />
-              <p>{section.text}</p>
-            </div>
-          );
-        })}
+    <div className="container">
+      <div className="blog-container">
+        <div className="blog-header">
+          <h1>{blog.title}</h1>
+          <img src={blog.cardImage} />
+        </div>
+        <div className="blog-body">
+          <p>{blog.introduction}</p>
+          {blog.sections.map((section) => {
+            return (
+              <div className={section.name}>
+                <img src={section.image} />
+                <p>{section.text}</p>
+              </div>
+            );
+          })}
+        </div>
       </div>
     </div>
   );

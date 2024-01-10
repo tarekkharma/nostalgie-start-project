@@ -3,9 +3,9 @@ import "../../assets/partiels/products-grid.scss";
 
 function ProductsGrid(props) {
   return (
-    <section className="products-grid">
+    <section className={`products-grid ${props.className}`}>
       <div className="title">
-        <h1>{props.title}</h1>
+        <h2>{props.title}</h2>
       </div>
       <div className="content">{props.children}</div>
       <div className="blog-footer">

@@ -1,0 +1,14 @@
+.container {
+  box-sizing: border-box;
+  .blogs-page-grid {
+    padding-left: 15px;
+
+    .blog-card {
+      margin-bottom: 30px;
+
+      @media (max-width: 992px) {
+        max-width: 47.5%;
+      }
+    }
+  }
+}

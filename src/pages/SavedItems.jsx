@@ -8,11 +8,11 @@ function SavedItems() {
   const savedItems = useSelector((state) => state.savedItems);
 
   return (
-    <div className="wishlist">
+    <div className="wishlist container">
       {savedItems.length === 0 ? (
         <p className="no-products-msg">No Saved Items Yet.</p>
       ) : (
-        <ProductsGrid title="SAVED ITEMS">
+        <ProductsGrid title="SAVED ITEMS" className="saved-items-grid">
           {savedItems.map((item) => {
             return (
               <ProductCard

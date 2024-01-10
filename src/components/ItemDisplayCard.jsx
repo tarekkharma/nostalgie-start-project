@@ -17,7 +17,7 @@ function ItemDisplayCard(props) {
   }
 
   return (
-    <div className="card-container">
+    <div className="display-card-container">
       <h2 className="item-title">{props.title}</h2>
       <p className="sub-title">{props.subtitle}</p>
       <button className="demand-price" onClick={() => props.showPopUp(true)}>

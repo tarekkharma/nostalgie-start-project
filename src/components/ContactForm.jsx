@@ -21,47 +21,49 @@ function ContactForm(props) {
   };
 
   return props.trigger ? (
-    <div className="contact-form">
-      <form
-        className="contact-form-inner"
-        method="post"
-        onSubmit={handleSubmit}
-      >
-        <h1>
-          Ask A<span> QUESTION</span>
-        </h1>
-        <input
-          type="text"
-          name="name"
-          placeholder="Name"
-          value={data.name}
-          onChange={handleChange}
-        />
-        <input
-          type="email"
-          name="email"
-          placeholder="Email"
-          value={data.email}
-          onChange={handleChange}
-        />
-        <input
-          type="phone"
-          name="phone"
-          placeholder="Telephone"
-          value={data.phone}
-          onChange={handleChange}
-        />
-        <textarea
-          name="message"
-          placeholder="Message"
-          cols="30"
-          rows="10"
-          value={data.message}
-          onChange={handleChange}
-        />
-        <button type="submit">send</button>
-        <CloseIcon onClick={() => props.showPopUp(false)} />
-      </form>
+    <div className="contact-form ">
+      <div className="container">
+        <form
+          className="contact-form-inner"
+          method="post"
+          onSubmit={handleSubmit}
+        >
+          <h1>
+            Ask A<span> QUESTION</span>
+          </h1>
+          <input
+            type="text"
+            name="name"
+            placeholder="Name"
+            value={data.name}
+            onChange={handleChange}
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            value={data.email}
+            onChange={handleChange}
+          />
+          <input
+            type="phone"
+            name="phone"
+            placeholder="Telephone"
+            value={data.phone}
+            onChange={handleChange}
+          />
+          <textarea
+            name="message"
+            placeholder="Message"
+            cols="30"
+            rows="10"
+            value={data.message}
+            onChange={handleChange}
+          />
+          <button type="submit">send</button>
+          <CloseIcon onClick={() => props.showPopUp(false)} />
+        </form>
+      </div>
     </div>
   ) : (
     ""

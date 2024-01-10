@@ -2,12 +2,13 @@ import { getBlogs } from "../stores/store";
 import { useSelector } from "react-redux/es/hooks/useSelector";
 import ProductsGrid from "../components/layouts/ProductsGrid";
 import BlogCard from "../components/BlogCard";
+import "../assets/partiels/blogs.scss";
 
 function Blogs() {
   const blogs = useSelector(getBlogs());
   return (
-    <div>
-      <ProductsGrid title="BLOGS">
+    <div className="container">
+      <ProductsGrid title="BLOGS" className="blogs-page-grid">
         {blogs.map((item) => {
           return (
             <BlogCard

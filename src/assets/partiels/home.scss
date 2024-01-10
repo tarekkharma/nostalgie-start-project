@@ -1,36 +1,101 @@
-.about-us {
-  .about-us-title {
+.home-page {
+  .home-products-grid {
+    padding-left: 15px;
+
+    .content {
+      flex-wrap: nowrap;
+      width: 100%;
+      @media (max-width: 992px) {
+        overflow-x: scroll;
+        justify-content: flex-start;
+        gap: 15px;
+      }
+      @media (max-width: 576px) {
+        gap: 10px;
+      }
+      .product-card {
+        max-width: 19%;
+        margin: 0;
+        @media (max-width: 992px) {
+          min-width: 200px;
+        }
+        @media (max-width: 576px) {
+          min-width: 130px;
+        }
+      }
+    }
+    .blog-footer {
+      display: block;
+    }
   }
-  .about-us-text {
-    margin-bottom: 50px;
-  }
-  .about-us-images {
-    background: #fff;
+  .about-us {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 15px;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    .image-container {
-      height: 320px;
-      position: relative;
+
+    .about-us-title {
+      font-weight: 500;
+      font-size: 1.3rem;
+      color: #2b2b2b;
+    }
+
+    .about-us-container {
       display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0;
+      @media (max-width: 768px) {
+        flex-direction: column;
+        gap: 15px;
+      }
+      .about-us-image {
+        flex: 2;
+        img {
+          width: 100%;
+          height: 100%;
+          display: block;
+          object-fit: cover;
+        }
+      }
+      .about-us-text {
+        background-color: rgb(83, 83, 83);
+        flex: 1;
+        padding: 30px;
+        p {
+          color: white;
+          margin-top: 0;
+        }
+        .text-second-part {
+          @media (max-width: 768px) {
+            display: none;
+          }
+        }
 
-      img {
-        position: absolute;
-        bottom: 0;
-      }
+        a {
+          margin-top: 15px;
+          text-decoration: none;
+          color: #ffba52;
+          border: 1px solid #ffba52;
+          padding: 7px 15px;
+          display: inline-block;
 
-      .first-image {
-        padding-bottom: 25px;
+          &:hover {
+            opacity: 0.8;
+          }
+        }
       }
-      .second-image {
-        z-index: 10;
+    }
+  }
+
+  .home-blogs {
+    padding-left: 15px;
+    .content {
+      @media (max-width: 768px) {
+        flex-direction: column;
       }
-      .third-image {
-        padding-bottom: 25px;
-      }
+    }
+    .blog-footer {
+      display: block;
     }
   }
 }

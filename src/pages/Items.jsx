@@ -2,10 +2,14 @@ import ProductCard from "../components/ProductCard";
 import ProductsGrid from "../components/layouts/ProductsGrid";
 import { useSelector } from "react-redux";
 import "../assets/partiels/items.scss";
+import FilterListIcon from "@mui/icons-material/FilterList";
+import CloseIcon from "@mui/icons-material/Close";
 import { getCategories, getSubCategories } from "../stores/store";
 import { useMemo, useState } from "react";
 
 function Items() {
+  const [filterStatus, setFilterStatus] = useState("closed");
+
   const products = useSelector((state) => state.products);
   const categories = useSelector(getCategories());
   const [selectedCategories, setSelectedCategories] = useState([]);
@@ -72,6 +76,8 @@ function Items() {
       }
     });
     setCurrentPage(1);
+    setFilterStatus("closed");
+    window.scrollTo(0, 0);
   };
 
   const listedSubCategories = useMemo(() => {
@@ -95,7 +101,7 @@ function Items() {
                         onChange={handleChange}
                         value={item}
                       />
-                      {item}
+                      {item.toUpperCase()}
                     </label>
                   </li>
                 );
@@ -149,30 +155,65 @@ function Items() {
     }
   }, [selectedCategories]);
 
-  const itemsPerPage = 4;
+  const itemsPerPage = 18;
   const lastIndex = currentPage * itemsPerPage;
   const firstIndex = lastIndex - itemsPerPage;
   const items = filteredProducts.slice(firstIndex, lastIndex);
   const npage = Math.ceil(filteredProducts.length / itemsPerPage);
   const numbers = [...Array(npage + 1).keys()].slice(1);
 
+  const updatedPagination = useMemo(() => {
+    if (currentPage === 1) {
+      return numbers.slice(currentPage - 1, currentPage + 3);
+    } else if (currentPage === npage) {
+      return numbers.slice(currentPage - 3, currentPage);
+    } else {
+      return numbers.slice(currentPage - 2, currentPage + 2);
+    }
+  }, [currentPage]);
+
   function nextPage() {
     setCurrentPage(currentPage + 1);
+    window.scrollTo(0, 0);
   }
 
   function prevPage() {
     setCurrentPage(currentPage - 1);
+    window.scrollTo(0, 0);
   }
 
   function changePage(id) {
     setCurrentPage(id);
+    window.scrollTo(0, 0);
   }
 
   return (
-    <div className="items">
-      <div className="filters">
+    <div className="items container">
+      <div
+        className={"overlay " + filterStatus}
+        onClick={() => {
+          setFilterStatus("closed");
+        }}
+      ></div>
+      <div
+        className="filter-button"
+        onClick={() => {
+          setFilterStatus("open");
+        }}
+      >
+        <FilterListIcon className="filter-icon" />
+        <span>Filter</span>
+      </div>
+
+      <div className={"filters " + filterStatus}>
         <div className="content">
           <h3>Filters</h3>
+          <CloseIcon
+            className="close-icon"
+            onClick={() => {
+              setFilterStatus("closed");
+            }}
+          />
           <ul className="categories">
             {categories.map((item, index) => {
               return (
@@ -186,7 +227,7 @@ function Items() {
                       onChange={handleChange}
                       value={item.name}
                     />
-                    {item.name}
+                    {item.name.toUpperCase()}
                   </label>
                 </li>
               );
@@ -209,7 +250,7 @@ function Items() {
               </li>
             )}
 
-            {numbers.map((n, i) => {
+            {updatedPagination.map((n, i) => {
               return (
                 <li
                   className={`page-item ${currentPage === n && "active"}`}

@@ -7,6 +7,7 @@ import Item from "./pages/Item";
 import Blogs from "./pages/Blogs";
 import Footer from "./components/layouts/Footer";
 import Blog from "./pages/Blog";
+import About from "./pages/About";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="about" element={<About />} />
         <Route path="items" element={<Items />} />
         <Route path="items/:itemId" element={<Item />} />
         <Route path="saved-items" element={<SavedItems />} />

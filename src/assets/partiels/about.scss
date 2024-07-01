@@ -3,10 +3,14 @@
     padding: 15px;
     padding-top: 0;
     position: relative;
+    @media (max-width: 992px) {
+      text-align: center;
+    }
 
     .heading-image {
       position: relative;
       width: 100%;
+
       img {
         box-sizing: border-box;
         max-width: 100%;
@@ -30,12 +34,16 @@
       left: 50%;
       transform: translate(-50%, -50%);
       color: white;
+      white-space: nowrap;
 
       h1 {
         font-weight: normal;
       }
       h2 {
         font-weight: normal;
+        @media (max-width: 576px) {
+          white-space: normal;
+        }
       }
     }
     .heading-subtext {
@@ -45,9 +53,63 @@
       max-width: 30%;
       color: white;
 
+      @media (max-width: 992px) {
+        bottom: 15px;
+        left: 50%;
+        transform: translateX(-50%);
+        max-width: 50%;
+      }
+
+      @media (max-width: 768px) {
+        display: none;
+      }
+
       p {
         font-size: 1.6rem;
       }
+    }
+  }
+  .about-text {
+    padding: 15px;
+    display: flex;
+    gap: 30px;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      gap: 15px;
+    }
+    p {
+      font-size: 1.2rem;
+      color: rgb(0, 0, 0, 0.6);
+    }
+  }
+  .about-products-grid {
+    padding-left: 15px;
+
+    .content {
+      flex-wrap: nowrap;
+      width: 100%;
+      @media (max-width: 992px) {
+        overflow-x: scroll;
+        justify-content: flex-start;
+        gap: 15px;
+      }
+      @media (max-width: 576px) {
+        gap: 10px;
+      }
+      .product-card {
+        max-width: 19%;
+        margin: 0;
+        @media (max-width: 992px) {
+          min-width: 200px;
+        }
+        @media (max-width: 576px) {
+          min-width: 130px;
+        }
+      }
+    }
+    .blog-footer {
+      display: block;
     }
   }
 }

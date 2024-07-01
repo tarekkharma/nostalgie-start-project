@@ -1,7 +1,7 @@
 {
   "name": "nostalgie",
   "version": "0.1.0",
-  "homepage": "https://tarekkharma.github.io/nostalgie-start-project/",
+  "homepage": "https://tarekkharma.github.io/nostalgie-start-project",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.11.1",

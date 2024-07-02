@@ -45,7 +45,7 @@ function Home() {
               dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
               sanctus est Lorem ipsum dolor sit amet.
             </p>
-            <Link to="">DISCOVER MORE</Link>
+            <Link to="about">DISCOVER MORE</Link>
           </div>
         </div>
       </div>

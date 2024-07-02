@@ -44,9 +44,9 @@ function Header() {
                 }}
               />
             </div>
-            <Link url="/" styleLink="text" text="Home" />
-            <Link url="/items" styleLink="text" text="Products" />
-            <Link url="/blogs" styleLink="text" text="Blogs" />
+            <Link url="/" styleLink="text" text="home" />
+            <Link url="/items" styleLink="text" text="products" />
+            <Link url="/blogs" styleLink="text" text="blogs" />
           </div>
         </div>
         <form className="search-form">

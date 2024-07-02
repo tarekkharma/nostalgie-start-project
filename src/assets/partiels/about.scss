@@ -35,13 +35,20 @@
       transform: translate(-50%, -50%);
       color: white;
       white-space: nowrap;
+      @media (max-width: 576px) {
+        top: 40%;
+      }
 
       h1 {
         font-weight: normal;
+        @media (max-width: 576px) {
+          font-size: 6vw;
+        }
       }
       h2 {
         font-weight: normal;
         @media (max-width: 576px) {
+          font-size: 1.2em;
           white-space: normal;
         }
       }

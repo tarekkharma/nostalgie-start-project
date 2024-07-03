@@ -1,6 +1,6 @@
 import "../assets/partiels/categories-list.scss";
 import Link from "../components/Link";
-import Logo from "../assets/img/logo.jpeg";
+import Logo from "../assets/img/product.jpg";
 
 function CategoriesList(props) {
   return (

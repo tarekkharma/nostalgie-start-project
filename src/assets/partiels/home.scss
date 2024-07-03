@@ -1,3 +1,4 @@
+@use "colors";
 .home-page {
   .home-products-grid {
     padding-left: 15px;
@@ -39,7 +40,7 @@
     .about-us-title {
       font-weight: 500;
       font-size: 1.3rem;
-      color: #2b2b2b;
+      color: colors.$text-lightblack;
     }
 
     .about-us-container {
@@ -58,7 +59,7 @@
         }
       }
       .about-us-text {
-        background-color: rgb(83, 83, 83);
+        background-color: colors.$background-dark;
         flex: 1;
         padding: 30px;
         padding-top: 50px;
@@ -76,13 +77,14 @@
         a {
           margin-top: 15px;
           text-decoration: none;
-          color: #ffba52;
-          border: 1px solid #ffba52;
+          color: colors.$text-bronze;
+          border: 1px solid colors.$border-bronze;
           padding: 7px 15px;
           display: inline-block;
 
           &:hover {
-            opacity: 0.8;
+            background-color: colors.$background-bronze;
+            color: white;
           }
         }
       }

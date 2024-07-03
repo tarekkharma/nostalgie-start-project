@@ -1,3 +1,4 @@
+@use "colors";
 .wishlist {
   box-sizing: border-box;
   height: fit-content;
@@ -8,7 +9,7 @@
   .no-products-msg {
     margin-top: 15%;
     margin-bottom: 15%;
-    color: gray;
+    color: colors.$text-lightblack;
     font-size: 30px;
     font-weight: lighter;
   }

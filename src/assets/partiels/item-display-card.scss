@@ -1,7 +1,9 @@
+@use "colors";
+
 .display-card-container {
-  border: 1px solid rgb(219, 219, 219);
+  border: 1px solid colors.$border-gray;
   height: 500px;
-  background-color: rgb(245, 245, 245);
+  background-color: colors.$background-light;
   max-width: 400px;
   box-sizing: border-box;
   padding: 0px 15px 20px 15px;
@@ -21,7 +23,7 @@
     height: 80px;
     width: 100%;
     margin-bottom: 15px;
-    color: #2b2b2b;
+    color: colors.$text-black;
     font-weight: 600;
   }
 
@@ -30,7 +32,7 @@
     margin-top: 20px;
     margin-bottom: 20px;
     height: 80px;
-    color: gray;
+    color: colors.$text-lightblack;
   }
   .demand-price {
     margin-bottom: 20px;
@@ -38,14 +40,14 @@
     width: 100%;
 
     height: 50px;
-    background-color: #ffba52;
+    background-color: colors.$background-bronze;
     color: white;
     font-size: medium;
     border: none;
     cursor: pointer;
 
     &:hover {
-      background-color: #2b2b2b;
+      background-color: colors.$background-dark;
     }
   }
   .save-item {
@@ -53,16 +55,16 @@
     display: block;
     height: 50px;
 
-    border: 1px solid #ffba52;
-    color: #ffba52;
-    background-color: rgb(245, 245, 245);
+    border: 1px solid colors.$border-bronze;
+    color: colors.$text-bronze;
+    background-color: transparent;
 
     font-size: medium;
     margin-bottom: 60px;
     cursor: pointer;
 
     &:hover {
-      background-color: #ffba52;
+      background-color: colors.$background-bronze;
       color: white;
       border: none;
     }
@@ -73,7 +75,7 @@
     margin-top: 13px;
 
     font-size: small;
-    color: gray;
+    color: colors.$text-lightblack;
     @media (max-width: 992px) {
       font-size: medium;
     }
@@ -86,9 +88,9 @@
 
     .ask-question {
       padding: 10px 13px;
-      border: 1px solid #2b2b2b;
-      color: #2b2b2b;
-      background-color: rgb(245, 245, 245);
+      border: 1px solid colors.$border-bronze;
+      color: colors.$text-bronze;
+      background-color: transparent;
       cursor: pointer;
 
       font-size: small;
@@ -113,14 +115,14 @@
       }
 
       &:hover {
-        background-color: #2b2b2b;
+        background-color: colors.$background-bronze;
         color: white;
       }
     }
 
     .contact {
       font-size: small;
-      color: #5c5c5c;
+      color: colors.$text-lightblack;
 
       @media (max-width: 992px) {
         font-size: medium;
@@ -139,12 +141,12 @@
           cursor: pointer;
           margin-bottom: 7px;
           &:hover {
-            color: #2b2b2b;
+            color: colors.$text-black;
           }
           svg {
             font-size: 1.1em;
             margin-right: 7px;
-            color: #ffba52;
+            color: colors.$text-bronze;
             @media (max-width: 992px) {
               font-size: 1.2em;
             }

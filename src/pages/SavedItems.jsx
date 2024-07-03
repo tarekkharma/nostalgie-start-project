@@ -1,6 +1,6 @@
 import ProductCard from "../components/ProductCard";
 import ProductsGrid from "../components/layouts/ProductsGrid";
-import Logo from "../assets/img/logo.jpeg";
+import Logo from "../assets/img/product.jpg";
 import { useSelector } from "react-redux";
 import "../assets/partiels/saved-items.scss";
 

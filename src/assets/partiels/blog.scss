@@ -1,3 +1,4 @@
+@use "colors";
 .container {
   box-sizing: border-box;
 
@@ -13,7 +14,7 @@
     .blog-header {
       h1 {
         font-weight: 500;
-        color: #2b2b2b;
+        color: colors.$text-black;
       }
       img {
         width: 100%;
@@ -27,7 +28,7 @@
 
       p {
         margin-bottom: 30px;
-        color: rgb(83, 83, 83);
+        color: colors.$text-lightblack;
         line-height: 150%;
       }
       .section {

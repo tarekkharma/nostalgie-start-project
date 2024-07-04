@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/nostalgie-start-project/static/css/main.26814b23.css",
+    "main.css": "/nostalgie-start-project/static/css/main.8bc3fa15.css",
     "main.js": "/nostalgie-start-project/static/js/main.a68fd1e1.js",
     "static/media/about.jpg": "/nostalgie-start-project/static/media/about.b28bb6914bad14321919.jpg",
     "static/media/slide.jpeg": "/nostalgie-start-project/static/media/slide.da0adf2c1cdddc8b76aa.jpeg",
     "static/media/logo.jpeg": "/nostalgie-start-project/static/media/logo.1638982e6ae2f3497774.jpeg",
     "static/media/footer-logo.png": "/nostalgie-start-project/static/media/footer-logo.d65ef257ac08ee9419fd.png",
     "index.html": "/nostalgie-start-project/index.html",
-    "main.26814b23.css.map": "/nostalgie-start-project/static/css/main.26814b23.css.map",
+    "main.8bc3fa15.css.map": "/nostalgie-start-project/static/css/main.8bc3fa15.css.map",
     "main.a68fd1e1.js.map": "/nostalgie-start-project/static/js/main.a68fd1e1.js.map"
   },
   "entrypoints": [
-    "static/css/main.26814b23.css",
+    "static/css/main.8bc3fa15.css",
     "static/js/main.a68fd1e1.js"
   ]
 }

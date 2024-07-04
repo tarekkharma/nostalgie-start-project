@@ -47,9 +47,11 @@
       }
       h2 {
         font-weight: normal;
+        @media (max-width: 768px) {
+          white-space: normal;
+        }
         @media (max-width: 576px) {
           font-size: 1.2em;
-          white-space: normal;
         }
       }
     }

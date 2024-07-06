@@ -1,7 +1,7 @@
-@use "colors";
+@use "global";
 
 .footer-container {
-  background-color: colors.$background-light;
+  background-color: global.$background-light;
   width: 100%;
 
   padding-bottom: 30px;
@@ -10,7 +10,7 @@
     box-sizing: border-box;
     font-size: 0.8rem;
     font-family: sans-serif;
-    color: colors.$text-gray;
+    color: global.$text-gray;
     display: flex;
     justify-content: space-between;
     padding: 15px;
@@ -23,7 +23,7 @@
 
     .footer-info {
       h3 {
-        color: colors.$text-lightblack;
+        color: global.$text-lightblack;
       }
       ul {
         list-style: none;
@@ -36,7 +36,7 @@
 
     .contact {
       h3 {
-        color: colors.$text-lightblack;
+        color: global.$text-lightblack;
       }
       ul {
         list-style: none;
@@ -71,6 +71,6 @@
   .footer-end {
     font-size: 0.6rem;
     margin-left: 20px;
-    color: colors.$text-gray;
+    color: global.$text-gray;
   }
 }

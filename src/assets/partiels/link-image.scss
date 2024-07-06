@@ -1,4 +1,4 @@
-@use "colors";
+@use "global";
 
 .imageBox {
   width: 100%;
@@ -15,7 +15,7 @@
     position: absolute;
     top: 0;
     right: 0;
-    background-color: colors.$overlay;
+    background-color: global.$overlay;
   }
 
   h2 {

@@ -1,4 +1,4 @@
-@use "colors";
+@use "global";
 .home-page {
   .home-products-grid {
     padding-left: 15px;
@@ -25,7 +25,7 @@
         }
       }
     }
-    .blog-footer {
+    .grid-footer {
       display: block;
     }
   }
@@ -40,7 +40,7 @@
     .about-us-title {
       font-weight: 500;
       font-size: 1.3rem;
-      color: colors.$text-lightblack;
+      color: global.$text-lightblack;
     }
 
     .about-us-container {
@@ -59,7 +59,7 @@
         }
       }
       .about-us-text {
-        background-color: colors.$background-dark;
+        background-color: global.$background-dark;
         flex: 1;
         padding: 30px;
         padding-top: 50px;
@@ -77,13 +77,13 @@
         a {
           margin-top: 15px;
           text-decoration: none;
-          color: colors.$text-bronze;
-          border: 1px solid colors.$border-bronze;
+          color: global.$text-bronze;
+          border: 1px solid global.$border-bronze;
           padding: 7px 15px;
           display: inline-block;
 
           &:hover {
-            background-color: colors.$background-bronze;
+            background-color: global.$background-bronze;
             color: white;
           }
         }
@@ -98,7 +98,7 @@
         flex-direction: column;
       }
     }
-    .blog-footer {
+    .grid-footer {
       display: block;
     }
   }

@@ -110,7 +110,9 @@ function Item() {
       </div>
       <ProductsGrid
         title="OTHER ITEMS OF INTEREST"
-        className="suggested-products-grid container"
+        className="item-products-grid"
+        footer="VIEW ALL ITEMS"
+        url="items"
       >
         {featuredProducts.map((item) => {
           return (

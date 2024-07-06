@@ -1,4 +1,4 @@
-@use "colors";
+@use "global";
 .container {
   box-sizing: border-box;
 
@@ -14,7 +14,7 @@
     .blog-header {
       h1 {
         font-weight: 500;
-        color: colors.$text-black;
+        color: global.$text-black;
       }
       img {
         width: 100%;
@@ -28,7 +28,7 @@
 
       p {
         margin-bottom: 30px;
-        color: colors.$text-lightblack;
+        color: global.$text-lightblack;
         line-height: 150%;
       }
       .section {

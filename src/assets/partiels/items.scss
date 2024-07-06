@@ -1,4 +1,4 @@
-@use "colors";
+@use "global";
 
 .items {
   display: flex;
@@ -11,7 +11,7 @@
     height: 100%;
     width: 100%;
     position: fixed;
-    background-color: colors.$overlay;
+    background-color: global.$overlay;
     top: 0;
     left: 0;
     z-index: 9;
@@ -30,7 +30,7 @@
     position: absolute;
     left: 15px;
     top: 15px;
-    color: colors.$text-lightblack;
+    color: global.$text-lightblack;
     .filter-icon {
       font-size: 1.5rem;
     }
@@ -56,7 +56,7 @@
       top: 0;
       transition: all 0.8s ease-in-out;
       z-index: 5;
-      background-color: colors.$background-light;
+      background-color: global.$background-light;
       width: fit-content;
       height: 100%;
       z-index: 10;
@@ -74,7 +74,7 @@
       top: 15px;
       right: 15px;
       cursor: pointer;
-      color: colors.$text-lightblack;
+      color: global.$text-lightblack;
       @media (min-width: 993px) {
         display: none;
       }
@@ -83,7 +83,7 @@
     &:after {
       content: "";
       width: 1px;
-      border-right: 1px solid colors.$border-gray;
+      border-right: 1px solid global.$border-gray;
       margin-top: 35px;
       margin-bottom: 35px;
     }
@@ -100,7 +100,7 @@
       }
 
       h3 {
-        color: colors.$text-lightblack;
+        color: global.$text-lightblack;
         font-weight: 600;
         @media (max-width: 992px) {
           margin-bottom: 0;
@@ -117,7 +117,7 @@
         label {
           display: flex;
           align-items: center;
-          color: colors.$text-lightblack;
+          color: global.$text-lightblack;
           margin-bottom: 10px;
           font-size: 0.9rem;
         }
@@ -129,7 +129,7 @@
         label {
           display: flex;
           align-items: center;
-          color: colors.$text-lightblack;
+          color: global.$text-lightblack;
           margin-bottom: 10px;
           font-size: 0.9rem;
         }
@@ -149,7 +149,7 @@
         display: flex;
         padding: 0;
         justify-content: center;
-        color: colors.$text-lightblack;
+        color: global.$text-lightblack;
 
         .page-item {
           width: 40px;
@@ -158,11 +158,11 @@
           padding-top: 5px;
           margin-left: 5px;
           cursor: pointer;
-          border: 1px solid colors.$border-gray;
+          border: 1px solid global.$border-gray;
 
           &.active {
             color: white;
-            background-color: colors.$background-bronze;
+            background-color: global.$background-bronze;
           }
 
           &:hover {

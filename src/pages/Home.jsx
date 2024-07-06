@@ -54,6 +54,7 @@ function Home() {
         title="NEW LISTINS"
         className="home-products-grid"
         footer="VIEW ALL NEW LISTINGS"
+        url="items"
       >
         {latestProducts.map((item) => {
           return (
@@ -69,6 +70,7 @@ function Home() {
         title="BLOGS"
         footer="BROWSE ALL BLOGS"
         className="home-blogs"
+        url="blogs"
       >
         {featuredBlogs.map((item) => {
           return (
@@ -86,6 +88,7 @@ function Home() {
         title="FEATURED ITEMS"
         className="home-products-grid"
         footer="VIEW ALL ITEMS"
+        url="items"
       >
         {featuredProducts.map((item) => {
           return (

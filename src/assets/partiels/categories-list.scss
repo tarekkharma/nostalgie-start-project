@@ -1,4 +1,4 @@
-@use "colors";
+@use "global";
 
 .categories-list {
   padding: 15px;
@@ -8,7 +8,7 @@
     h2 {
       font-weight: 500;
       font-size: 1.3rem;
-      color: colors.$text-lightblack;
+      color: global.$text-lightblack;
       margin: 30px auto;
       text-align: center;
     }

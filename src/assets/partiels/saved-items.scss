@@ -1,4 +1,4 @@
-@use "colors";
+@use "global";
 .wishlist {
   box-sizing: border-box;
   height: fit-content;
@@ -9,7 +9,7 @@
   .no-products-msg {
     margin-top: 15%;
     margin-bottom: 15%;
-    color: colors.$text-lightblack;
+    color: global.$text-lightblack;
     font-size: 30px;
     font-weight: lighter;
   }

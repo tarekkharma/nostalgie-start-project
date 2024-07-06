@@ -8,8 +8,8 @@ function ProductsGrid(props) {
         <h2>{props.title}</h2>
       </div>
       <div className="content">{props.children}</div>
-      <div className="blog-footer">
-        <NavLink to="blogs">{props.footer}</NavLink>
+      <div className="grid-footer">
+        <NavLink to={"/" + props.url}>{props.footer}</NavLink>
       </div>
     </section>
   );

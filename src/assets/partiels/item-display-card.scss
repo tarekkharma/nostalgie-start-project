@@ -24,7 +24,8 @@
     width: 100%;
     margin-bottom: 15px;
     color: global.$text-black;
-    font-weight: 600;
+
+    font-weight: global.$primary-font-weight-semiBold;
   }
 
   .sub-title {
@@ -42,7 +43,7 @@
     height: 50px;
     background-color: global.$background-bronze;
     color: white;
-    font-size: medium;
+    font-size: 1.1rem;
     border: none;
     cursor: pointer;
 
@@ -59,7 +60,7 @@
     color: global.$text-bronze;
     background-color: transparent;
 
-    font-size: medium;
+    font-size: 1.1rem;
     margin-bottom: 60px;
     cursor: pointer;
 
@@ -74,10 +75,10 @@
     margin-bottom: 13px;
     margin-top: 13px;
 
-    font-size: small;
+    font-size: 0.8rem;
     color: global.$text-lightblack;
     @media (max-width: 992px) {
-      font-size: medium;
+      font-size: 1rem;
     }
   }
   .question-or-contact {
@@ -93,8 +94,6 @@
       background-color: transparent;
       cursor: pointer;
 
-      font-size: small;
-
       @media (max-width: 1200px) {
         padding: 10px 10px;
         font-size: 0.7rem;
@@ -102,16 +101,15 @@
 
       @media (max-width: 992px) {
         padding: 13px 90px;
-        font-size: 0.9rem;
+        font-size: 1rem;
       }
       @media (max-width: 768px) {
         padding: 13px 60px;
-        font-size: 0.9rem;
       }
 
       @media (max-width: 576px) {
         padding: 10px;
-        font-size: 0.7rem;
+        font-size: 0.8rem;
       }
 
       &:hover {
@@ -121,14 +119,14 @@
     }
 
     .contact {
-      font-size: small;
+      font-size: 0.8rem;
       color: global.$text-lightblack;
 
       @media (max-width: 992px) {
-        font-size: medium;
+        font-size: 1rem;
       }
       @media (max-width: 570px) {
-        font-size: small;
+        font-size: 0.8rem;
       }
       ul {
         list-style: none;
@@ -147,12 +145,6 @@
             font-size: 1.1em;
             margin-right: 7px;
             color: global.$text-bronze;
-            @media (max-width: 992px) {
-              font-size: 1.2em;
-            }
-            @media (max-width: 576px) {
-              font-size: 1.1em;
-            }
           }
         }
       }

@@ -38,7 +38,7 @@
     align-items: center;
 
     .about-us-title {
-      font-weight: 500;
+      font-weight: global.$primary-font-weight-semiBold;
       font-size: 1.3rem;
       color: global.$text-lightblack;
     }
@@ -60,10 +60,12 @@
       }
       .about-us-text {
         background-color: global.$background-dark;
+        font-weight: global.$primary-font-weight-light;
+        line-height: 150%;
         flex: 1;
         padding: 30px;
         padding-top: 50px;
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         p {
           color: white;
           margin-top: 0;
@@ -78,6 +80,9 @@
           margin-top: 15px;
           text-decoration: none;
           color: global.$text-bronze;
+          font-weight: global.$primary-font-weight-medium;
+          font-size: 1rem;
+
           border: 1px solid global.$border-bronze;
           padding: 7px 15px;
           display: inline-block;

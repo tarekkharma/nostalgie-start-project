@@ -16,7 +16,7 @@
 
   .title {
     h2 {
-      font-weight: 500;
+      font-weight: global.$primary-font-weight-semiBold;
       font-size: 1.3rem;
       color: global.$text-lightblack;
     }
@@ -31,6 +31,7 @@
   .grid-footer {
     text-align: center;
     padding-bottom: 40px;
+    font-weight: global.$primary-font-weight-medium;
     display: none;
     a {
       display: block;

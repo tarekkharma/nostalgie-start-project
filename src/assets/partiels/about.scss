@@ -39,10 +39,11 @@
       white-space: nowrap;
 
       h1 {
-        font-weight: normal;
+        font-weight: global.$primary-font-weight-semiBold;
       }
+
       h2 {
-        font-weight: normal;
+        font-weight: global.$primary-font-weight-medium;
         @media (max-width: 576px) {
           white-space: normal;
         }
@@ -75,14 +76,14 @@
     padding: 15px;
     display: flex;
     gap: 30px;
-
+    color: global.$text-lightblack;
+    line-height: 150%;
     @media (max-width: 768px) {
       flex-direction: column;
       gap: 15px;
     }
     p {
       font-size: 1.2rem;
-      color: global.$text-lightblack;
     }
   }
   .about-products-grid {

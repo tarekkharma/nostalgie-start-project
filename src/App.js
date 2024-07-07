@@ -1,11 +1,12 @@
 import Header from "./components/layouts/Header";
+import Footer from "./components/layouts/Footer";
 import { Route, Routes } from "react-router-dom";
 import SavedItems from "./pages/SavedItems";
 import Home from "./pages/Home";
 import Items from "./pages/Items";
 import Item from "./pages/Item";
 import Blogs from "./pages/Blogs";
-import Footer from "./components/layouts/Footer";
+
 import Blog from "./pages/Blog";
 import About from "./pages/About";
 

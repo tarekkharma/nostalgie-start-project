@@ -125,7 +125,9 @@
 
         a {
           color: global.$text-lightblack;
-          font-family: sans-serif;
+          font-weight: global.$primary-font-weight-medium;
+          font-size: 1.1rem;
+
           text-decoration: none;
           padding: 10px;
           text-transform: uppercase;
@@ -165,6 +167,7 @@
 
         svg {
           color: global.$text-lightblack;
+          font-size: 1.8rem;
         }
 
         p {
@@ -176,7 +179,6 @@
           background-color: global.$background-bronze;
           width: 15px;
           height: 15px;
-          font-size: 13px;
           display: flex;
           justify-content: center;
           align-items: center;

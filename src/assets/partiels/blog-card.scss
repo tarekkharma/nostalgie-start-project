@@ -35,6 +35,7 @@
     h3 {
       margin: 0;
       margin-top: 5px;
+      font-weight: global.$primary-font-weight-medium;
     }
 
     .summary {
@@ -52,7 +53,6 @@
       color: global.$text-bronze;
       border: 1px solid global.$border-bronze;
       padding: 5px 10px;
-      font-family: math;
 
       &:hover {
         color: white;

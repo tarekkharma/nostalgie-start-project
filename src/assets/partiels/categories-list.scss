@@ -6,7 +6,7 @@
   box-sizing: border-box;
   .categpries-list-header {
     h2 {
-      font-weight: 500;
+      font-weight: global.$primary-font-weight-semiBold;
       font-size: 1.3rem;
       color: global.$text-lightblack;
       margin: 30px auto;

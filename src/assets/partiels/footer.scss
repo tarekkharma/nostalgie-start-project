@@ -8,8 +8,6 @@
 
   .footer {
     box-sizing: border-box;
-    font-size: 0.8rem;
-    font-family: sans-serif;
     color: global.$text-gray;
     display: flex;
     justify-content: space-between;
@@ -24,6 +22,7 @@
     .footer-info {
       h3 {
         color: global.$text-lightblack;
+        font-weight: global.$primary-font-weight-medium;
       }
       ul {
         list-style: none;
@@ -37,6 +36,7 @@
     .contact {
       h3 {
         color: global.$text-lightblack;
+        font-weight: global.$primary-font-weight-medium;
       }
       ul {
         list-style: none;
@@ -48,7 +48,7 @@
           justify-content: center;
           svg {
             margin-right: 10px;
-            font-size: medium;
+            font-size: 1.2em;
           }
         }
       }
@@ -69,7 +69,7 @@
   }
 
   .footer-end {
-    font-size: 0.6rem;
+    font-size: 0.8rem;
     margin-left: 20px;
     color: global.$text-gray;
   }

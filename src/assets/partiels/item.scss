@@ -56,7 +56,7 @@
           @media (max-width: 992px) {
             padding-right: 15px;
             padding-top: 0;
-            max-height: 35px;
+            max-height: 32px;
             overflow: hidden;
             border-bottom: 1px solid global.$border-gray;
             transition: max-height 0.5s ease-in-out;
@@ -66,10 +66,10 @@
             }
           }
           h3 {
-            font-weight: 600;
+            font-weight: global.$primary-font-weight-semiBold;
             svg {
               float: inline-end;
-              font-size: 1.9rem;
+              font-size: 2rem;
               transition: transform 0.5s ease-in-out;
 
               &.open {
@@ -82,6 +82,7 @@
           }
           p {
             color: global.$text-lightblack;
+            line-height: 150%;
           }
         }
 
@@ -92,7 +93,7 @@
           @media (max-width: 992px) {
             padding-left: 15px;
             padding-top: 0;
-            max-height: 35px;
+            max-height: 32px;
             overflow: hidden;
             border-bottom: 1px solid global.$border-gray;
             transition: max-height 0.5s ease-in-out;
@@ -103,11 +104,11 @@
           }
 
           h3 {
-            font-weight: 600;
+            font-weight: global.$primary-font-weight-semiBold;
 
             svg {
               float: inline-end;
-              font-size: 1.9rem;
+              font-size: 2rem;
               transition: transform 0.5s ease-in-out;
 
               &.open {
@@ -124,7 +125,7 @@
             padding: 0;
             h4 {
               margin-bottom: 0;
-              font-weight: 600;
+              font-weight: global.$primary-font-weight-medium;
               color: global.$text-gray;
             }
             p {
@@ -144,7 +145,7 @@
         h3 {
           color: global.$text-black;
 
-          font-weight: 600;
+          font-weight: global.$primary-font-weight-semiBold;
         }
 
         p {

@@ -1,4 +1,4 @@
-//colors
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
 
 $text-black: #464646;
 $text-lightblack: #636363;
@@ -14,3 +14,10 @@ $border-gray: #d3d3d3;
 $border-bronze: #c2a347ad;
 
 $overlay: #00000033;
+
+$primary-font-family: "Inter", sans-serif;
+$primary-font-weight-light: 300;
+$primary-font-weight: 400;
+$primary-font-weight-medium: 500;
+$primary-font-weight-semiBold: 600;
+$primary-font-weight-bold: 700;

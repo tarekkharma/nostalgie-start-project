@@ -11,7 +11,7 @@ html {
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
 
-    @media (max-width: 768px) {
+    @include md {
       margin-top: 110px;
     }
 
@@ -20,16 +20,16 @@ html {
 
       margin: 0 auto;
 
-      @media (max-width: 1200px) {
+      @include xl {
         max-width: 960px;
       }
-      @media (max-width: 992px) {
+      @include lg {
         max-width: 720px;
       }
-      @media (max-width: 768px) {
+      @include md {
         max-width: 540px;
       }
-      @media (max-width: 576px) {
+      @include sm {
         min-width: 100%;
       }
     }

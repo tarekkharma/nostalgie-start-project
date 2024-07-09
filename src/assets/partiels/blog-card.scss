@@ -14,7 +14,7 @@
   color: global.$text-lightblack;
   max-width: calc(33.33% - (15px * 2 / 3));
 
-  @media (max-width: 768px) {
+  @include global.md {
     min-width: 100%;
   }
   &:hover {

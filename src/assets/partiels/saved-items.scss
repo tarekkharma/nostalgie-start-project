@@ -16,11 +16,5 @@
 
   .saved-items-grid {
     padding-left: 15px;
-
-    .product-card {
-      @media (min-width: 1201px) {
-        max-width: 24%;
-      }
-    }
   }
 }

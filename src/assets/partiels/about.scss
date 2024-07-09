@@ -5,7 +5,7 @@
     padding: 15px;
     padding-top: 0;
     position: relative;
-    @media (max-width: 992px) {
+    @include global.lg {
       text-align: center;
     }
 
@@ -44,7 +44,7 @@
 
       h2 {
         font-weight: global.$primary-font-weight-medium;
-        @media (max-width: 576px) {
+        @include global.sm {
           white-space: normal;
         }
       }
@@ -56,14 +56,14 @@
       max-width: 30%;
       color: white;
 
-      @media (max-width: 992px) {
+      @include global.lg {
         bottom: 15px;
         left: 50%;
         transform: translateX(-50%);
         max-width: 50%;
       }
 
-      @media (max-width: 768px) {
+      @include global.md {
         display: none;
       }
 
@@ -78,7 +78,7 @@
     gap: 30px;
     color: global.$text-lightblack;
     line-height: 150%;
-    @media (max-width: 768px) {
+    @include global.md {
       flex-direction: column;
       gap: 15px;
     }
@@ -92,19 +92,19 @@
     .content {
       flex-wrap: nowrap;
       width: 100%;
-      @media (max-width: 992px) {
+      @include global.lg {
         overflow-x: scroll;
       }
-      @media (max-width: 576px) {
+      @include global.sm {
         gap: 10px;
       }
 
       .product-card {
         max-width: calc(20% - (15px * 4 / 5));
-        @media (max-width: 992px) {
+        @include global.lg {
           min-width: 200px;
         }
-        @media (max-width: 576px) {
+        @include global.sm {
           min-width: 130px;
         }
       }

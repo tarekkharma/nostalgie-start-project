@@ -28,13 +28,15 @@
   .container {
     box-sizing: border-box;
     align-items: center;
-    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+
     position: relative;
     border-bottom: 1px solid global.$border-gray;
-    @media (min-width: 769px) {
-      display: flex;
-      justify-content: space-between;
-      padding: 15px;
+    @include global.md {
+      display: block;
+      padding: 10px 15px;
     }
     .search-form {
       display: flex;
@@ -43,10 +45,13 @@
       align-items: center;
       background-color: white;
       color: global.$text-gray;
-      margin-top: 10px;
-      @media (min-width: 769px) {
-        min-width: 200px;
-        margin: 10px;
+      min-width: 200px;
+      margin: 10px;
+
+      @include global.md {
+        margin: 0;
+        min-width: fit-content;
+        margin-top: 10px;
       }
 
       .search-box {
@@ -78,29 +83,33 @@
           top: 15px;
           right: 15px;
           color: global.$text-lightblack;
+          display: none;
+          font-size: 1.8rem;
 
-          @media (min-width: 769px) {
-            display: none;
+          @include global.md {
+            display: inline-block;
           }
         }
       }
 
       .list {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        position: static;
+        width: fit-content;
+
         justify-content: flex-start;
         align-items: center;
-        width: 60%;
+
         height: 100%;
-        position: fixed;
         transition: all 0.8s ease-in-out;
         top: 0px;
         z-index: 10;
 
-        @media (min-width: 769px) {
-          flex-direction: row;
-          position: static;
-          width: fit-content;
+        @include global.md {
+          flex-direction: column;
+          position: fixed;
+          width: 60%;
         }
 
         &.closed {
@@ -114,11 +123,14 @@
           position: absolute;
           top: 10px;
           right: 10px;
-          @media (min-width: 769px) {
-            display: none;
+          display: none;
+          @include global.md {
+            display: inline-block;
           }
 
           svg {
+            font-size: 1.8rem;
+
             color: global.$text-lightblack;
           }
         }
@@ -155,14 +167,14 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        position: absolute;
-        top: 15px;
-        right: 40px;
+        position: relative;
+        top: 0;
+        right: 0;
 
-        @media (min-width: 769px) {
-          position: relative;
-          top: 0;
-          right: 0;
+        @include global.md {
+          position: absolute;
+          top: 15px;
+          right: 40px;
         }
 
         svg {

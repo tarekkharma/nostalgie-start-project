@@ -6,19 +6,19 @@
     .content {
       flex-wrap: nowrap;
       width: 100%;
-      @media (max-width: 992px) {
+      @include global.lg {
         overflow-x: scroll;
       }
-      @media (max-width: 576px) {
+      @include global.sm {
         gap: 10px;
       }
 
       .product-card {
         max-width: calc(20% - (15px * 4 / 5));
-        @media (max-width: 992px) {
+        @include global.lg {
           min-width: 200px;
         }
-        @media (max-width: 576px) {
+        @include global.sm {
           min-width: 130px;
         }
       }
@@ -34,7 +34,7 @@
 
     .about-us-container {
       display: flex;
-      @media (max-width: 768px) {
+      @include global.md {
         flex-direction: column;
         gap: 15px;
       }
@@ -59,7 +59,7 @@
           margin-top: 0;
         }
         .text-second-part {
-          @media (max-width: 768px) {
+          @include global.md {
             display: none;
           }
         }
@@ -87,7 +87,7 @@
   .home-blogs {
     padding-left: 15px;
     .content {
-      @media (max-width: 768px) {
+      @include global.md {
         flex-direction: column;
       }
     }

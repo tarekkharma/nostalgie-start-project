@@ -11,10 +11,10 @@
     height: 500px;
     border: 1px solid global.$border-gray;
 
-    @media (max-width: 992px) {
+    @include global.lg {
       border: none;
     }
-    @media (max-width: 768px) {
+    @include global.md {
       height: 300px;
     }
 
@@ -27,7 +27,7 @@
       padding: 4px 6px;
       cursor: pointer;
 
-      @media (max-width: 992px) {
+      @include global.lg {
         left: -10px;
       }
 
@@ -53,7 +53,7 @@
       padding: 4px 6px;
       cursor: pointer;
 
-      @media (max-width: 992px) {
+      @include global.lg {
         right: -10px;
       }
 
@@ -87,7 +87,7 @@
         align-items: center;
         height: 500px;
 
-        @media (max-width: 768px) {
+        @include global.md {
           height: 300px;
         }
 
@@ -108,7 +108,7 @@
     overflow-x: scroll;
     overflow-y: hidden;
 
-    @media (max-width: 992px) {
+    @include global.lg {
       display: none;
     }
 
@@ -136,9 +136,9 @@
 
   .imageNum {
     color: global.$text-gray;
-
-    @media (min-width: 993px) {
-      display: none;
+    display: none;
+    @include global.lg {
+      display: block;
     }
     p {
       margin-bottom: 0;

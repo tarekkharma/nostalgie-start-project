@@ -8,10 +8,10 @@
   box-sizing: border-box;
   padding: 15px;
 
-  @media (max-width: 1200px) {
+  @include global.xl {
     max-width: 315px;
   }
-  @media (max-width: 992px) {
+  @include global.lg {
     padding: 0;
     min-width: 100%;
     height: auto;
@@ -79,7 +79,7 @@
 
     font-size: 0.8rem;
     color: global.$text-lightblack;
-    @media (max-width: 992px) {
+    @include global.lg {
       font-size: 1rem;
     }
   }
@@ -96,20 +96,20 @@
       background-color: transparent;
       cursor: pointer;
 
-      @media (max-width: 1200px) {
+      @include global.xl {
         padding: 10px 10px;
         font-size: 0.7rem;
       }
 
-      @media (max-width: 992px) {
+      @include global.lg {
         padding: 13px 90px;
         font-size: 1rem;
       }
-      @media (max-width: 768px) {
+      @include global.md {
         padding: 13px 60px;
       }
 
-      @media (max-width: 576px) {
+      @include global.sm {
         padding: 10px;
         font-size: 0.8rem;
       }
@@ -124,10 +124,10 @@
       font-size: 0.8rem;
       color: global.$text-lightblack;
 
-      @media (max-width: 992px) {
+      @include global.lg {
         font-size: 1rem;
       }
-      @media (max-width: 570px) {
+      @include global.sm {
         font-size: 0.8rem;
       }
       ul {

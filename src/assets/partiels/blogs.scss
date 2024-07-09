@@ -1,3 +1,4 @@
+@use "global";
 .container {
   box-sizing: border-box;
   .blogs-page-grid {
@@ -7,7 +8,7 @@
     }
     .content {
       .blog-card {
-        @media (max-width: 992px) {
+        @include global.lg {
           max-width: calc(50% - (15px * 1 / 2));
         }
       }

@@ -25,12 +25,8 @@
     }
   }
   .filter-button {
-    display: flex;
-    align-items: center;
-    position: absolute;
-    left: 15px;
-    top: 15px;
-    color: global.$text-lightblack;
+    display: none;
+
     .filter-icon {
       font-size: 1.5rem;
     }
@@ -38,8 +34,14 @@
       font-size: 1.2rem;
       font-weight: global.$primary-font-weight-medium;
     }
-    @media (min-width: 993px) {
-      display: none;
+    @include global.lg {
+      display: flex;
+      align-items: center;
+      position: absolute;
+      left: 15px;
+      top: 15px;
+      cursor: pointer;
+      color: global.$text-lightblack;
     }
   }
   .filters {
@@ -51,7 +53,7 @@
     height: 80vh;
     overflow: auto;
 
-    @media (max-width: 992px) {
+    @include global.lg {
       position: fixed;
       top: 0;
       transition: all 0.8s ease-in-out;
@@ -74,9 +76,10 @@
       top: 15px;
       right: 15px;
       cursor: pointer;
+      display: none;
       color: global.$text-lightblack;
-      @media (min-width: 993px) {
-        display: none;
+      @include global.lg {
+        display: inline-block;
       }
     }
 
@@ -95,7 +98,7 @@
       padding: 15px;
       justify-content: flex-start;
       align-items: flex-start;
-      @media (max-width: 992px) {
+      @include global.lg {
         padding-top: 0;
       }
 
@@ -103,7 +106,7 @@
         color: global.$text-lightblack;
         font-weight: global.$primary-font-weight-medium;
         font-size: 1.4rem;
-        @media (max-width: 992px) {
+        @include global.lg {
           margin-bottom: 0;
         }
       }

@@ -65,11 +65,17 @@
       justify-content: space-between;
       align-items: center;
       width: 100%;
-
-      img {
+      .logo-link {
         width: 20%;
         min-width: 140px;
-        height: auto;
+
+        &:hover {
+          opacity: 0.8;
+        }
+        img {
+          width: 100%;
+          height: auto;
+        }
       }
 
       .header-icons {
@@ -149,7 +155,8 @@
             transition: all 1s ease;
           }
 
-          &:hover {
+          &:hover,
+          &.active {
             &:after {
               content: "";
               width: 100%;
@@ -170,6 +177,9 @@
         position: relative;
         top: 0;
         right: 0;
+        &:hover {
+          opacity: 0.8;
+        }
 
         @include global.md {
           position: absolute;

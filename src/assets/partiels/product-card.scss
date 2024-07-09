@@ -10,15 +10,10 @@
   position: relative;
   text-decoration: none;
   color: global.$text-lightblack;
-  max-width: 32%;
-  margin-bottom: 20px;
+  max-width: calc(33.33% - (15px * 2 / 3));
 
-  @media (max-width: 1200px) {
-    margin-bottom: 15px;
-  }
   @media (max-width: 768px) {
-    max-width: 49%;
-    margin-bottom: 10px;
+    max-width: calc(50% - (15px * 1 / 2));
   }
 
   &:hover {
@@ -47,9 +42,9 @@
   .footer {
     svg {
       position: absolute;
-      top: 10px;
-      right: 10px;
-      color: global.$text-black;
+      top: 2px;
+      right: 2px;
+      font-size: 2rem;
     }
   }
 }

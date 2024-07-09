@@ -73,7 +73,7 @@
     }
   }
   .about-text {
-    padding: 15px;
+    padding: 15px 15px 40px 15px;
     display: flex;
     gap: 30px;
     color: global.$text-lightblack;
@@ -94,15 +94,13 @@
       width: 100%;
       @media (max-width: 992px) {
         overflow-x: scroll;
-        justify-content: flex-start;
-        gap: 15px;
       }
       @media (max-width: 576px) {
         gap: 10px;
       }
+
       .product-card {
-        max-width: 19%;
-        margin: 0;
+        max-width: calc(20% - (15px * 4 / 5));
         @media (max-width: 992px) {
           min-width: 200px;
         }

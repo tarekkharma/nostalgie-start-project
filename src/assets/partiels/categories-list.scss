@@ -1,45 +1,40 @@
 @use "global";
 
 .categories-list {
-  padding: 15px;
+  padding: 0 15px 40px 15px;
   width: 100%;
   box-sizing: border-box;
-  .categpries-list-header {
-    h2 {
-      font-weight: global.$primary-font-weight-semiBold;
-      font-size: 1.3rem;
-      color: global.$text-lightblack;
-      margin: 30px auto;
-      text-align: center;
-    }
-  }
   .home-categories {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
     @media (max-width: 992px) {
+      gap: 15px;
       overflow-x: scroll;
+    }
+    @media (max-width: 576px) {
+      gap: 10px;
     }
     .row {
       display: flex;
-      justify-content: space-between;
+      justify-content: flex-start;
       gap: 30px;
 
       @media (max-width: 992px) {
-        justify-content: flex-start;
-        gap: 20px;
+        gap: 15px;
       }
       @media (max-width: 576px) {
         gap: 10px;
       }
 
       a {
-        max-width: 23%;
-        margin-bottom: 30px;
+        max-width: calc(25% - (30px * 3 / 4));
         @media (max-width: 992px) {
           min-width: 200px;
-          margin-bottom: 20px;
         }
         @media (max-width: 576px) {
           min-width: 130px;
-          margin-bottom: 10px;
         }
       }
     }

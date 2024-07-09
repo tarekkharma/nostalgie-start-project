@@ -8,15 +8,13 @@
       width: 100%;
       @media (max-width: 992px) {
         overflow-x: scroll;
-        justify-content: flex-start;
-        gap: 15px;
       }
       @media (max-width: 576px) {
         gap: 10px;
       }
+
       .product-card {
-        max-width: 19%;
-        margin: 0;
+        max-width: calc(20% - (15px * 4 / 5));
         @media (max-width: 992px) {
           min-width: 200px;
         }
@@ -32,16 +30,7 @@
   .about-us {
     width: 100%;
     box-sizing: border-box;
-    padding: 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    .about-us-title {
-      font-weight: global.$primary-font-weight-semiBold;
-      font-size: 1.3rem;
-      color: global.$text-lightblack;
-    }
+    padding: 0 15px 40px 15px;
 
     .about-us-container {
       display: flex;
@@ -63,8 +52,7 @@
         font-weight: global.$primary-font-weight-light;
         line-height: 150%;
         flex: 1;
-        padding: 30px;
-        padding-top: 50px;
+        padding: 50px 30px;
         font-size: 1.1rem;
         p {
           color: white;

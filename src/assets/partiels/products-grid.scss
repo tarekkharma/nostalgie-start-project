@@ -1,11 +1,7 @@
 @use "global";
 
 .products-grid {
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 15px;
+  padding: 0 15px;
   padding-left: 50px;
   width: 100%;
   box-sizing: border-box;
@@ -14,27 +10,21 @@
     padding-left: 15px;
   }
 
-  .title {
-    h2 {
-      font-weight: global.$primary-font-weight-semiBold;
-      font-size: 1.3rem;
-      color: global.$text-lightblack;
-    }
-  }
-
   .content {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-wrap: wrap;
+    box-sizing: border-box;
+    gap: 15px;
     margin-bottom: 30px;
   }
   .grid-footer {
-    text-align: center;
     padding-bottom: 40px;
     font-weight: global.$primary-font-weight-medium;
     display: none;
+    text-align: center;
     a {
-      display: block;
+      display: inline-block;
       text-decoration: none;
       border: 1px solid global.$border-bronze;
       padding: 8px 15px;

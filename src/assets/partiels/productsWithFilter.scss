@@ -1,0 +1,51 @@
+@use "global";
+
+.page-content {
+  flex: 3.5;
+
+  .pagination-controls {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 15px 15px 40px 0;
+    display: flex;
+    justify-content: center;
+
+    li {
+      padding: 10px 15px;
+      margin-right: 10px;
+      display: inline-block;
+      cursor: pointer;
+      border: 1px solid global.$border-gray;
+      background-color: white;
+      color: global.$text-lightblack;
+      font-weight: global.$primary-font-weight-medium;
+      font-size: 1.2rem;
+      text-align: center;
+
+      &.active {
+        color: white;
+        background-color: global.$background-bronze;
+      }
+
+      &.disabled {
+        display: none;
+      }
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  .no-items-msg {
+    text-align: center;
+    p {
+      margin-top: 15%;
+      margin-bottom: 15%;
+      padding: 15px;
+      color: global.$text-lightblack;
+      font-size: 1.5rem;
+      font-weight: global.$primary-font-weight-light;
+    }
+  }
+}

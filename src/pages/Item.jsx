@@ -113,7 +113,7 @@ function Item() {
           title="OTHER ITEMS OF INTEREST"
           className="item-products-grid"
           footer="VIEW ALL ITEMS"
-          url="items"
+          url="items/search"
         >
           {featuredProducts.map((item) => {
             return (

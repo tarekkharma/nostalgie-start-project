@@ -37,15 +37,30 @@
       transform: translate(-50%, -50%);
       color: white;
       white-space: nowrap;
+      @media (max-width: 576px) {
+        top: 40%;
+      }
 
       h1 {
         font-weight: global.$primary-font-weight-semiBold;
+        
+        @include global.sm {
+          font-size: 6vw;
+        }
       }
 
       h2 {
+
         font-weight: global.$primary-font-weight-medium;
-        @include global.sm {
+        
+=======
+        
+        @include global.md {
+
           white-space: normal;
+        }
+        @include global.sm {
+          font-size: 1.2em;
         }
       }
     }

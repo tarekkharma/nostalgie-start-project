@@ -43,20 +43,16 @@
 
       h1 {
         font-weight: global.$primary-font-weight-semiBold;
-        
+
         @include global.sm {
           font-size: 6vw;
         }
       }
 
       h2 {
-
         font-weight: global.$primary-font-weight-medium;
-        
-=======
-        
-        @include global.md {
 
+        @include global.md {
           white-space: normal;
         }
         @include global.sm {

@@ -1,3 +1,4 @@
+@use "global";
 .item {
   .item-display {
     box-sizing: border-box;
@@ -5,46 +6,46 @@
     display: flex;
     justify-content: space-between;
 
-    @media (max-width: 992px) {
+    @include global.lg {
       flex-direction: column;
       align-items: center;
     }
 
     .info {
-      @media (max-width: 992px) {
+      @include global.lg {
         width: 100%;
       }
     }
     .images {
       width: 750px;
 
-      @media (max-width: 1200px) {
+      @include global.xl {
         width: 600px;
       }
-      @media (max-width: 992px) {
+      @include global.lg {
         width: 690px;
       }
-      @media (max-width: 768px) {
+      @include global.md {
         width: 510px;
       }
 
-      @media (max-width: 576px) {
+      @include global.sm {
         width: 100%;
       }
     }
   }
   .further-info {
-    background-color: rgb(245, 245, 245);
+    background-color: global.$background-light;
     width: 100%;
-
+    font-size: 1.1rem;
     .container {
       box-sizing: border-box;
 
       .item-details {
         display: flex;
         justify-content: space-between;
-        color: #2b2b2b;
-        @media (max-width: 992px) {
+        color: global.$text-black;
+        @include global.lg {
           flex-direction: column;
         }
         .description {
@@ -52,12 +53,12 @@
           padding: 15px;
           padding-right: 30px;
 
-          @media (max-width: 992px) {
+          @include global.lg {
             padding-right: 15px;
             padding-top: 0;
-            max-height: 48px;
+            max-height: 34.5px;
             overflow: hidden;
-            border-bottom: 1px solid lightgray;
+            border-bottom: 1px solid global.$border-gray;
             transition: max-height 0.5s ease-in-out;
             &.open {
               max-height: 400px;
@@ -65,22 +66,24 @@
             }
           }
           h3 {
-            font-weight: 600;
+            font-weight: global.$primary-font-weight-semiBold;
             svg {
               float: inline-end;
-              font-size: 1.9rem;
+              font-size: 2rem;
               transition: transform 0.5s ease-in-out;
-
+              display: none;
               &.open {
                 transform: rotate(180deg);
               }
-              @media (min-width: 993px) {
-                display: none;
+              @include global.lg {
+                display: inline-block;
               }
             }
           }
           p {
-            color: gray;
+            color: global.$text-lightblack;
+            line-height: 150%;
+            margin-top: 15.96px;
           }
         }
 
@@ -88,12 +91,12 @@
           flex: 1;
           padding: 15px;
           padding-left: 30px;
-          @media (max-width: 992px) {
+          @include global.lg {
             padding-left: 15px;
             padding-top: 0;
-            max-height: 48px;
+            max-height: 34.5px;
             overflow: hidden;
-            border-bottom: 1px solid lightgray;
+            border-bottom: 1px solid global.$border-gray;
             transition: max-height 0.5s ease-in-out;
             &.open {
               max-height: 400px;
@@ -102,17 +105,19 @@
           }
 
           h3 {
-            font-weight: 600;
+            font-weight: global.$primary-font-weight-semiBold;
+
             svg {
               float: inline-end;
-              font-size: 1.9rem;
+              font-size: 2rem;
               transition: transform 0.5s ease-in-out;
+              display: none;
 
               &.open {
                 transform: rotate(180deg);
               }
-              @media (min-width: 993px) {
-                display: none;
+              @include global.lg {
+                display: inline-block;
               }
             }
           }
@@ -122,11 +127,12 @@
             padding: 0;
             h4 {
               margin-bottom: 0;
-              font-weight: 600;
+              font-weight: global.$primary-font-weight-medium;
+              color: global.$text-gray;
             }
             p {
               margin-top: 5px;
-              color: gray;
+              color: global.$text-lightblack;
             }
           }
         }
@@ -134,45 +140,53 @@
 
       .shipping {
         padding: 15px;
-        @media (max-width: 576px) {
+        padding-top: 0;
+        @include global.sm {
           text-align: center;
         }
 
         h3 {
-          color: #2b2b2b;
+          color: global.$text-black;
 
-          font-weight: 600;
+          font-weight: global.$primary-font-weight-semiBold;
         }
 
         p {
-          color: gray;
+          color: global.$text-lightblack;
+          margin-bottom: 14.04px;
         }
       }
     }
   }
-  .suggested-products-grid {
+  .item-products-grid {
     padding-left: 15px;
+
+    .section-title {
+      margin-top: 60px;
+    }
+
     .content {
       flex-wrap: nowrap;
       width: 100%;
-      @media (max-width: 992px) {
+      @include global.lg {
         overflow-x: scroll;
-        justify-content: flex-start;
-        gap: 15px;
       }
-      @media (max-width: 576px) {
+      @include global.sm {
         gap: 10px;
       }
+
       .product-card {
-        max-width: 19%;
-        margin: 0;
-        @media (max-width: 992px) {
+        max-width: calc(20% - (15px * 4 / 5));
+        @include global.lg {
           min-width: 200px;
         }
-        @media (max-width: 576px) {
+        @include global.sm {
           min-width: 130px;
         }
       }
+    }
+    .grid-footer {
+      display: block;
     }
   }
 }

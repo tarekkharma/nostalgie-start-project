@@ -108,20 +108,24 @@ function Item() {
           </div>
         </div>
       </div>
-      <ProductsGrid
-        title="OTHER ITEMS OF INTEREST"
-        className="suggested-products-grid container"
-      >
-        {featuredProducts.map((item) => {
-          return (
-            <ProductCard
-              id={item.id}
-              image={item.imageUrl}
-              title={item.title}
-            />
-          );
-        })}
-      </ProductsGrid>
+      <div className="container">
+        <ProductsGrid
+          title="OTHER ITEMS OF INTEREST"
+          className="item-products-grid"
+          footer="VIEW ALL ITEMS"
+          url="items"
+        >
+          {featuredProducts.map((item) => {
+            return (
+              <ProductCard
+                id={item.id}
+                image={item.imageUrl}
+                title={item.title}
+              />
+            );
+          })}
+        </ProductsGrid>
+      </div>
 
       <ContactForm trigger={popUp} showPopUp={setPopUp} />
     </div>

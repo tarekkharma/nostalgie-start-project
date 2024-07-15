@@ -1,12 +1,13 @@
 import "../assets/partiels/categories-list.scss";
 import Link from "../components/Link";
-import Logo from "../assets/img/logo.jpeg";
+import Logo from "../assets/img/product.jpg";
+import SectionTitle from "./SectionTitle";
 
 function CategoriesList(props) {
   return (
     <div className="categories-list">
       <div className="categpries-list-header">
-        <h2>ANTIQUE CATEGORIES</h2>
+        <SectionTitle title="antique categories" />
       </div>
       <div className="home-categories">
         <div className="row">

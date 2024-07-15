@@ -13,7 +13,7 @@ import aboutUsImage from "../assets/img/about.jpg";
 import "../assets/partiels/home.scss";
 import { Link } from "react-router-dom";
 import HomeSlider from "../components/HomeSlider";
-
+import SectionTitle from "../components/SectionTitle";
 function Home() {
   const latestProducts = useSelector(getLatestProducts(5));
   const featuredProducts = useSelector(getFeaturedProducts(5));
@@ -25,7 +25,9 @@ function Home() {
       <CategoriesList type="image" />
 
       <div className="about-us">
-        <h2 className="about-us-title">ABOUT NOSTALGIA GALLERY</h2>
+        <div className="about-us-header">
+          <SectionTitle title="about nostalgia gallery" />
+        </div>
         <div className="about-us-container">
           <div className="about-us-image">
             <img src={aboutUsImage} alt="" />
@@ -54,6 +56,7 @@ function Home() {
         title="NEW LISTINS"
         className="home-products-grid"
         footer="VIEW ALL NEW LISTINGS"
+        url="items"
       >
         {latestProducts.map((item) => {
           return (
@@ -69,6 +72,7 @@ function Home() {
         title="BLOGS"
         footer="BROWSE ALL BLOGS"
         className="home-blogs"
+        url="blogs"
       >
         {featuredBlogs.map((item) => {
           return (
@@ -86,6 +90,7 @@ function Home() {
         title="FEATURED ITEMS"
         className="home-products-grid"
         footer="VIEW ALL ITEMS"
+        url="items"
       >
         {featuredProducts.map((item) => {
           return (

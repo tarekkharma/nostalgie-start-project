@@ -72,6 +72,7 @@ const About = () => {
         title="NEW LISTINS"
         className="about-products-grid"
         footer="VIEW ALL NEW LISTINGS"
+        url="items"
       >
         {latestProducts.map((item) => {
           return (

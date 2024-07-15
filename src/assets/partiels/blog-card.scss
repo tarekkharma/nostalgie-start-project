@@ -1,23 +1,25 @@
+@use "global";
+
 .blog-card {
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   height: fit-content;
-  max-width: 31%;
-  border: 1px solid lightgray;
+  border: 1px solid global.$border-gray;
   border-radius: 5px;
   position: relative;
   text-decoration: none;
-  color: rgb(83, 83, 83);
+  color: global.$text-lightblack;
+  max-width: calc(33.33% - (15px * 2 / 3));
 
-  @media (max-width: 768px) {
+  @include global.md {
     min-width: 100%;
-    margin-bottom: 30px;
   }
   &:hover {
     box-shadow: 5px 5px 5px rgba($color: #000000, $alpha: 0.2);
-    color: #2b2b2b;
+    color: global.$text-black;
   }
 
   .header {
@@ -33,6 +35,7 @@
     h3 {
       margin: 0;
       margin-top: 5px;
+      font-weight: global.$primary-font-weight-medium;
     }
 
     .summary {
@@ -47,11 +50,14 @@
       display: block;
 
       text-decoration: none;
-      color: white;
-      background-color: #ffba52;
-      border-radius: 5px;
+      color: global.$text-bronze;
+      border: 1px solid global.$border-bronze;
       padding: 5px 10px;
-      font-family: math;
+
+      &:hover {
+        color: white;
+        background-color: global.$background-bronze;
+      }
     }
   }
 }

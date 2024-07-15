@@ -27,7 +27,10 @@ function Header() {
       ></div>
       <div className="container">
         <div className="header-elements ">
-          <img src={Logo} alt="logo" />
+          <NavLink to="/" className="logo-link">
+            <img src={Logo} alt="logo" />
+          </NavLink>
+
           <div className="header-icons">
             <MenuIcon
               className="open-icon"

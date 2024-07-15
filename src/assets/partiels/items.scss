@@ -1,3 +1,5 @@
+@use "global";
+
 .items {
   display: flex;
   position: relative;
@@ -9,7 +11,7 @@
     height: 100%;
     width: 100%;
     position: fixed;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: global.$overlay;
     top: 0;
     left: 0;
     z-index: 9;
@@ -23,21 +25,23 @@
     }
   }
   .filter-button {
-    display: flex;
-    align-items: center;
-    position: absolute;
-    left: 15px;
-    top: 15px;
-    color: rgb(83, 83, 83);
+    display: none;
+
     .filter-icon {
       font-size: 1.5rem;
     }
     span {
-      font-size: large;
-      font-weight: 500;
+      font-size: 1.2rem;
+      font-weight: global.$primary-font-weight-medium;
     }
-    @media (min-width: 993px) {
-      display: none;
+    @include global.lg {
+      display: flex;
+      align-items: center;
+      position: absolute;
+      left: 15px;
+      top: 15px;
+      cursor: pointer;
+      color: global.$text-lightblack;
     }
   }
   .filters {
@@ -49,12 +53,12 @@
     height: 80vh;
     overflow: auto;
 
-    @media (max-width: 992px) {
+    @include global.lg {
       position: fixed;
       top: 0;
       transition: all 0.8s ease-in-out;
       z-index: 5;
-      background-color: rgb(245, 245, 245);
+      background-color: global.$background-light;
       width: fit-content;
       height: 100%;
       z-index: 10;
@@ -72,16 +76,17 @@
       top: 15px;
       right: 15px;
       cursor: pointer;
-      color: rgb(83, 83, 83);
-      @media (min-width: 993px) {
-        display: none;
+      display: none;
+      color: global.$text-lightblack;
+      @include global.lg {
+        display: inline-block;
       }
     }
 
     &:after {
       content: "";
       width: 1px;
-      border-right: 1px solid lightgrey;
+      border-right: 1px solid global.$border-gray;
       margin-top: 35px;
       margin-bottom: 35px;
     }
@@ -93,14 +98,15 @@
       padding: 15px;
       justify-content: flex-start;
       align-items: flex-start;
-      @media (max-width: 992px) {
+      @include global.lg {
         padding-top: 0;
       }
 
       h3 {
-        color: rgb(83, 83, 83);
-        font-weight: 600;
-        @media (max-width: 992px) {
+        color: global.$text-lightblack;
+        font-weight: global.$primary-font-weight-medium;
+        font-size: 1.4rem;
+        @include global.lg {
           margin-bottom: 0;
         }
       }
@@ -115,9 +121,14 @@
         label {
           display: flex;
           align-items: center;
-          color: rgb(83, 83, 83);
+          color: global.$text-gray;
+          font-size: 1rem;
           margin-bottom: 10px;
-          font-size: 0.9rem;
+          font-weight: global.$primary-font-weight-semiBold;
+          cursor: pointer;
+          &:hover {
+            opacity: 0.8;
+          }
         }
       }
       .sub-categories {
@@ -127,9 +138,14 @@
         label {
           display: flex;
           align-items: center;
-          color: rgb(83, 83, 83);
+          color: global.$text-gray;
+          font-weight: global.$primary-font-weight-semiBold;
+          font-size: 1rem;
           margin-bottom: 10px;
-          font-size: 0.9rem;
+          cursor: pointer;
+          &:hover {
+            opacity: 0.8;
+          }
         }
       }
     }
@@ -147,21 +163,24 @@
         display: flex;
         padding: 0;
         justify-content: center;
-        color: rgb(83, 83, 83);
+        color: global.$text-lightblack;
 
         .page-item {
           width: 40px;
-          height: 24px;
+          height: 25px;
           text-align: center;
+          padding-top: 5px;
+          margin-left: 5px;
           cursor: pointer;
+          border: 1px solid global.$border-gray;
 
           &.active {
-            border: 1px solid rgb(83, 83, 83);
-            border-radius: 8%;
+            color: white;
+            background-color: global.$background-bronze;
           }
 
           &:hover {
-            box-shadow: 3px 3px 3px rgba($color: #000000, $alpha: 0.2);
+            opacity: 0.8;
           }
         }
       }

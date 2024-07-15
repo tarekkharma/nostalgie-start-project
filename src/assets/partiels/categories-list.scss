@@ -1,43 +1,40 @@
+@use "global";
+
 .categories-list {
-  padding: 15px;
+  padding: 0 15px 40px 15px;
   width: 100%;
   box-sizing: border-box;
-  .categpries-list-header {
-    h2 {
-      font-weight: 500;
-      font-size: 1.3rem;
-      color: #2b2b2b;
-      margin: 30px auto;
-      text-align: center;
-    }
-  }
   .home-categories {
-    @media (max-width: 992px) {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    @include global.lg {
+      gap: 15px;
       overflow-x: scroll;
+    }
+    @include global.sm {
+      gap: 10px;
     }
     .row {
       display: flex;
-      justify-content: space-between;
+      justify-content: flex-start;
       gap: 30px;
 
-      @media (max-width: 992px) {
-        justify-content: flex-start;
-        gap: 20px;
+      @include global.lg {
+        gap: 15px;
       }
-      @media (max-width: 576px) {
+      @include global.sm {
         gap: 10px;
       }
 
       a {
-        max-width: 23%;
-        margin-bottom: 30px;
-        @media (max-width: 992px) {
+        max-width: calc(25% - (30px * 3 / 4));
+        @include global.lg {
           min-width: 200px;
-          margin-bottom: 20px;
         }
-        @media (max-width: 576px) {
+        @include global.sm {
           min-width: 130px;
-          margin-bottom: 10px;
         }
       }
     }

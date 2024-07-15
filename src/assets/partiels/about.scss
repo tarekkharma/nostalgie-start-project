@@ -1,9 +1,11 @@
+@use "global";
+
 .about-page {
   .about-heading {
     padding: 15px;
     padding-top: 0;
     position: relative;
-    @media (max-width: 992px) {
+    @include global.lg {
       text-align: center;
     }
 
@@ -23,7 +25,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgb(0, 0, 0, 0.5);
+        background-color: global.$overlay;
       }
     }
     .heading-text {
@@ -40,17 +42,24 @@
       }
 
       h1 {
-        font-weight: normal;
-        @media (max-width: 576px) {
+        font-weight: global.$primary-font-weight-semiBold;
+        
+        @include global.sm {
           font-size: 6vw;
         }
       }
+
       h2 {
-        font-weight: normal;
-        @media (max-width: 768px) {
+
+        font-weight: global.$primary-font-weight-medium;
+        
+=======
+        
+        @include global.md {
+
           white-space: normal;
         }
-        @media (max-width: 576px) {
+        @include global.sm {
           font-size: 1.2em;
         }
       }
@@ -62,14 +71,14 @@
       max-width: 30%;
       color: white;
 
-      @media (max-width: 992px) {
+      @include global.lg {
         bottom: 15px;
         left: 50%;
         transform: translateX(-50%);
         max-width: 50%;
       }
 
-      @media (max-width: 768px) {
+      @include global.md {
         display: none;
       }
 
@@ -79,17 +88,17 @@
     }
   }
   .about-text {
-    padding: 15px;
+    padding: 15px 15px 40px 15px;
     display: flex;
     gap: 30px;
-
-    @media (max-width: 768px) {
+    color: global.$text-lightblack;
+    line-height: 150%;
+    @include global.md {
       flex-direction: column;
       gap: 15px;
     }
     p {
       font-size: 1.2rem;
-      color: rgb(0, 0, 0, 0.6);
     }
   }
   .about-products-grid {
@@ -98,26 +107,24 @@
     .content {
       flex-wrap: nowrap;
       width: 100%;
-      @media (max-width: 992px) {
+      @include global.lg {
         overflow-x: scroll;
-        justify-content: flex-start;
-        gap: 15px;
       }
-      @media (max-width: 576px) {
+      @include global.sm {
         gap: 10px;
       }
+
       .product-card {
-        max-width: 19%;
-        margin: 0;
-        @media (max-width: 992px) {
+        max-width: calc(20% - (15px * 4 / 5));
+        @include global.lg {
           min-width: 200px;
         }
-        @media (max-width: 576px) {
+        @include global.sm {
           min-width: 130px;
         }
       }
     }
-    .blog-footer {
+    .grid-footer {
       display: block;
     }
   }

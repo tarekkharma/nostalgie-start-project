@@ -1,3 +1,4 @@
+@use "global";
 .wishlist {
   box-sizing: border-box;
   height: fit-content;
@@ -8,18 +9,12 @@
   .no-products-msg {
     margin-top: 15%;
     margin-bottom: 15%;
-    color: gray;
+    color: global.$text-lightblack;
     font-size: 30px;
-    font-weight: lighter;
+    font-weight: global.$primary-font-weight-light;
   }
 
   .saved-items-grid {
     padding-left: 15px;
-
-    .product-card {
-      @media (min-width: 1201px) {
-        max-width: 24%;
-      }
-    }
   }
 }

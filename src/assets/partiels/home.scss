@@ -1,3 +1,4 @@
+@use "global";
 .home-page {
   .home-products-grid {
     padding-left: 15px;
@@ -5,46 +6,35 @@
     .content {
       flex-wrap: nowrap;
       width: 100%;
-      @media (max-width: 992px) {
+      @include global.lg {
         overflow-x: scroll;
-        justify-content: flex-start;
-        gap: 15px;
       }
-      @media (max-width: 576px) {
+      @include global.sm {
         gap: 10px;
       }
+
       .product-card {
-        max-width: 19%;
-        margin: 0;
-        @media (max-width: 992px) {
+        max-width: calc(20% - (15px * 4 / 5));
+        @include global.lg {
           min-width: 200px;
         }
-        @media (max-width: 576px) {
+        @include global.sm {
           min-width: 130px;
         }
       }
     }
-    .blog-footer {
+    .grid-footer {
       display: block;
     }
   }
   .about-us {
     width: 100%;
     box-sizing: border-box;
-    padding: 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    .about-us-title {
-      font-weight: 500;
-      font-size: 1.3rem;
-      color: #2b2b2b;
-    }
+    padding: 0 15px 40px 15px;
 
     .about-us-container {
       display: flex;
-      @media (max-width: 768px) {
+      @include global.md {
         flex-direction: column;
         gap: 15px;
       }
@@ -58,17 +48,18 @@
         }
       }
       .about-us-text {
-        background-color: rgb(83, 83, 83);
+        background-color: global.$background-dark;
+        font-weight: global.$primary-font-weight-light;
+        line-height: 150%;
         flex: 1;
-        padding: 30px;
-        padding-top: 50px;
-        font-size: 1.2rem;
+        padding: 50px 30px;
+        font-size: 1.1rem;
         p {
           color: white;
           margin-top: 0;
         }
         .text-second-part {
-          @media (max-width: 768px) {
+          @include global.md {
             display: none;
           }
         }
@@ -76,13 +67,17 @@
         a {
           margin-top: 15px;
           text-decoration: none;
-          color: #ffba52;
-          border: 1px solid #ffba52;
+          color: global.$text-bronze;
+          font-weight: global.$primary-font-weight-medium;
+          font-size: 1rem;
+
+          border: 1px solid global.$border-bronze;
           padding: 7px 15px;
           display: inline-block;
 
           &:hover {
-            opacity: 0.8;
+            background-color: global.$background-bronze;
+            color: white;
           }
         }
       }
@@ -92,11 +87,11 @@
   .home-blogs {
     padding-left: 15px;
     .content {
-      @media (max-width: 768px) {
+      @include global.md {
         flex-direction: column;
       }
     }
-    .blog-footer {
+    .grid-footer {
       display: block;
     }
   }

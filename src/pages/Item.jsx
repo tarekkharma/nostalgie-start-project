@@ -14,6 +14,7 @@ function Item() {
   const { itemId } = useParams();
 
   const [popUp, setPopUp] = useState(false);
+  const [largeDisplay, setLargeDisplay] = useState(false);
 
   const product = useSelector((state) => state.products).find(
     (element) => element.id == itemId
@@ -37,11 +38,11 @@ function Item() {
     setDimentionsIsOpen(!dimentionsIsOpen);
   };
 
-  return (
+  return !largeDisplay ? (
     <div className="item">
       <div className="item-display container">
         <div className="images">
-          <ItemSilder images={product.subImages} />
+          <ItemSilder images={product.subImages} enlarge={setLargeDisplay} />
         </div>
         <div className="info">
           <ItemDisplayCard
@@ -129,6 +130,13 @@ function Item() {
 
       <ContactForm trigger={popUp} showPopUp={setPopUp} />
     </div>
+  ) : (
+    <ItemSilder
+      images={product.subImages}
+      enlarge={setLargeDisplay}
+      class="large"
+      large={largeDisplay}
+    />
   );
 }
 

@@ -4,12 +4,30 @@
   margin: auto;
   width: 100%;
 
+  &.large {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    animation: fadeIn 0.5s;
+    z-index: 20;
+    background-color: white;
+  }
+
   .image-slider {
     overflow: hidden;
     position: relative;
     width: 100%;
     height: 500px;
     border: 1px solid global.$border-gray;
+
+    &.large {
+      border: none;
+    }
 
     @include global.lg {
       border: none;
@@ -21,8 +39,8 @@
     .scroll-left {
       position: absolute;
       top: 50%;
+      transform: translateY(-50%);
       left: 6px;
-      margin-top: -10px;
       z-index: 5;
       padding: 4px 6px;
       cursor: pointer;
@@ -42,13 +60,17 @@
       svg {
         font-size: 2rem;
         color: global.$text-lightblack;
+
+        &.large {
+          font-size: 3rem;
+        }
       }
     }
     .scroll-right {
       position: absolute;
       top: 50%;
+      transform: translateY(-50%);
       right: 6px;
-      margin-top: -10px;
       z-index: 5;
       padding: 4px 6px;
       cursor: pointer;
@@ -67,6 +89,9 @@
       svg {
         font-size: 2rem;
         color: global.$text-lightblack;
+        &.large {
+          font-size: 3rem;
+        }
       }
     }
     .slides {
@@ -95,11 +120,41 @@
           height: 100%;
           width: 100%;
           object-fit: contain;
-          /*      &:hover {
-            transform: scale(1.5);
-          }*/
+          cursor: pointer;
+          &:hover {
+            opacity: 0.8;
+
+            /*transform: scale(2);
+            cursor: zoom-in;
+            object-fit: contain;*/
+          }
+
+          &.large {
+            opacity: 1;
+          }
         }
       }
+    }
+  }
+
+  .close-image {
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 100;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &.large {
+      display: inline-block;
+    }
+    svg {
+      font-size: 3rem;
+      color: global.$text-lightblack;
     }
   }
   .sub-images {
@@ -107,6 +162,10 @@
     align-items: center;
     overflow-x: scroll;
     overflow-y: hidden;
+
+    &.large {
+      display: none;
+    }
 
     @include global.lg {
       display: none;
@@ -141,6 +200,10 @@
   .imageNum {
     color: global.$text-gray;
     display: none;
+
+    &.large {
+      display: none;
+    }
     @include global.lg {
       display: block;
     }

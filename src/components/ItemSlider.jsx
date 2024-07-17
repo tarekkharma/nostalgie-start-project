@@ -1,6 +1,8 @@
 import { useEffect, useMemo, useState } from "react";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
+import CloseIcon from "@mui/icons-material/Close";
+
 import "../assets/partiels/item-slider.scss";
 
 function ItemSilder(props) {
@@ -33,16 +35,20 @@ function ItemSilder(props) {
   }, []);
 
   const conditionalMargin = useMemo(() => {
-    if (screenWidth <= 576) {
-      return screenWidth - 30;
-    } else if (screenWidth > 576 && screenWidth <= 768) {
-      return 510;
-    } else if (screenWidth > 768 && screenWidth <= 992) {
-      return 690;
-    } else if (screenWidth > 992 && screenWidth <= 1200) {
-      return 600;
+    if (props.large) {
+      return screenWidth;
     } else {
-      return 750;
+      if (screenWidth <= 576) {
+        return screenWidth - 30;
+      } else if (screenWidth > 576 && screenWidth <= 768) {
+        return 510;
+      } else if (screenWidth > 768 && screenWidth <= 992) {
+        return 690;
+      } else if (screenWidth > 992 && screenWidth <= 1200) {
+        return 600;
+      } else {
+        return 750;
+      }
     }
   }, [screenWidth]);
 
@@ -105,13 +111,14 @@ function ItemSilder(props) {
   };
 
   return (
-    <div className="image-container">
-      <div className="image-slider">
+    <div className={"image-container " + props.class}>
+      <div className={"image-slider " + props.class}>
         <div
           className={`scroll-right ${leftAndRightDisabled ? "disabled" : ""}`}
         >
           <ArrowForwardIosIcon
             onClick={!leftAndRightDisabled ? scrollRight : null}
+            className={props.class}
           />
         </div>
         <div
@@ -119,11 +126,12 @@ function ItemSilder(props) {
         >
           <ArrowBackIosNewIcon
             onClick={!leftAndRightDisabled ? scrollLeft : null}
+            className={props.class}
           />
         </div>
         <div
           id="slides"
-          className={`slides ${hasTransitionClass ? "transition" : ""}`}
+          className={`slides ${hasTransitionClass ? "transition " : ""}`}
           style={{ left: slideLeftMargin() }}
         >
           {stateSlides.map((slide, index) => {
@@ -133,13 +141,21 @@ function ItemSilder(props) {
                 className="slide"
                 style={{ width: conditionalMargin + "px" }}
               >
-                <img src={slide} alt="slide" className="slide-inner" />
+                <img
+                  src={slide}
+                  alt="slide"
+                  className={"slide-inner " + props.class}
+                  onClick={() => props.enlarge(true)}
+                />
               </div>
             );
           })}
         </div>
       </div>
-      <div className="sub-images">
+      <div className={"close-image " + props.class}>
+        <CloseIcon onClick={() => props.enlarge(false)} />
+      </div>
+      <div className={"sub-images " + props.class}>
         {stateSlides.map((slide, index) => {
           if (index === 0 || index === stateSlides.length - 1) {
             return null;
@@ -155,7 +171,7 @@ function ItemSilder(props) {
           );
         })}
       </div>
-      <div className="imageNum">
+      <div className={"imageNum " + props.class}>
         <p>
           {visibleSlide == 0
             ? stateSlides.length - 2
